@@ -364,3 +364,26 @@ body {
 /* Tejas Hande
 tejasamolhande@gmail.com
 8600828734 */
+
+
+
+/* Addition */
+.logo{
+	display:flex;
+}
+
+.logo-icon{
+    height: 50px;
+	width: auto;
+    max-height: 15vw;
+	border-radius: 36%;
+	margin-right: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.logo-icon:hover{
+	transition: transform 1.5s  ease-in-out;
+	transform: scale(2);
+}
+
