@@ -387,3 +387,13 @@ tejasamolhande@gmail.com
 	transform: scale(2);
 }
 
+
+.kite{
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+	height: auto; 
+	width: 35px; 
+	margin: 0px; 
+}
+
