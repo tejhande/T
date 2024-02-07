@@ -62,7 +62,7 @@
         </div>
         <div class="intro-buttons">
           <a href="https://wa.me/918600828734?text=Hi%20Tejas" target="_blank"><button class="btn common-btn">Hire Me</button></a>
-          <a href="https://drive.google.com/file/d/1ZojjfLS6avrf-oQ4AzuQMwVLVLlGfeBX/view?usp=drive_link" target="_blank"><button class="btn ghost-btn">Get Resume</button></a>
+          <a href="https://drive.google.com/file/d/1ZojjfLS6avrf-oQ4AzuQMwVLVLlGfeBX/view?usp=drive_link" target="_blank"><button class="btn ghost-btn" id="myResume" onclick="goToResume()" >Get Resume</button></a>
         </div>
       </div>
     </section>
@@ -247,12 +247,12 @@
       <div class="contact-content">
 		<div class="contact-form-container">
 		  <h1 class="greet-heading">Get In Touch</h1>
-		  <form class="contact-form">
+		  <form class="contact-form" id="myForm" >
 			<input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" />
 			<input class="form-controls" type="email" placeholder="Enter Your Email" required/>
 			<input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="+^[0-9]{10}$"/>
 			<textarea class="form-controls" placeholder="Write your message" name="message" id="" ></textarea>
-			<input class="form-btn btn common-btn" type="submit" value="Send Message" />
+			<input class="form-btn btn common-btn" type="submit" value="Send Message" onclick="form_submit()" />
 		  </form>
 		</div>
 	  
