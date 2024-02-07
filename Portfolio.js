@@ -16,6 +16,24 @@ hamburger.addEventListener('click', function () {
 	} 
 });
 
+
+
+function form_submit(){
+    var form=document.getElementById("myForm");
+    //console.log(form);
+    form.onsubmit=function(){
+        alert("Form Submitted Successfully!");
+    } 
+    
+}
+
+function goToResume(){
+	alert(`Redirecting to Resume Page...`);
+}
+
+
 // Tejas Hande
 // tejasamolhande@gmail.com
 // 8600828734
+
+
