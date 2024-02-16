@@ -18,14 +18,21 @@ hamburger.addEventListener('click', function () {
 
 
 
-function form_submit(){
-    var form=document.getElementById("myForm");
-    //console.log(form);
-    form.onsubmit=function(){
-        alert("Form Submitted Successfully!");
-    } 
-    
-}
+// function form_submit(){
+//     var form=document.getElementById("myForm");
+//     //console.log(form);
+//     form.onsubmit=function(){
+//         alert("Form Submitted Successfully!");
+//     } 
+// }
+
+
+
+function form_submit(event) {
+        event.preventDefault();
+        window.location.href = '404.html';
+    }
+
 
 
 function goToResume() {
