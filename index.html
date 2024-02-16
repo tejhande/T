@@ -245,12 +245,12 @@
         <h1 class="my-heading text-center">Contact Me</h1>
       </div>
       <div class="contact-content">
-		<div class="contact-form-container">
+		<<div class="contact-form-container">
       			<h1 class="greet-heading">Get In Touch</h1>
-      				<form class="contact-form" id="myForm" onsubmit="form_submit(event)">
-          				<input class="form-controls" type="text" placeholder="Enter Your Name" required />
-          				<input class="form-controls" type="text" placeholder="Enter Your Email" required />
-          				<input class="form-controls" type="text" placeholder="Enter Your Phone" required />
+      				<form class="contact-form" id="myForm" onsubmit="return form_submit(event)">
+         				<input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" />
+          				<input class="form-controls" type="email" placeholder="Enter Your Email" required/>
+          				<input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="[0-9]{10}" /> 
           				<textarea class="form-controls" placeholder="Write your message" name="message"></textarea>
           				<input class="form-btn btn common-btn" type="submit" value="Send Message" />
       				</form>
