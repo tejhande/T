@@ -29,9 +29,17 @@ hamburger.addEventListener('click', function () {
 
 
 function form_submit(event) {
-        event.preventDefault();
+    event.preventDefault(); 
+    var form = document.getElementById("myForm");
+    if (form.checkValidity()) {
         window.location.href = '404.html';
+    } else {
+        alert("Please fill out all required fields correctly.");
     }
+    
+    return false; 
+}
+
 
 
 
