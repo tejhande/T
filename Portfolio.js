@@ -43,17 +43,53 @@ function form_submit(event) {
 
 
 
-function goToResume() {
-    var ans = confirm(`Downloading Resume`);
-    if  (ans == true) {
-    } else {
-        resumeLink.removeAttribute("download");
-        resumeLink.removeAttribute("href");
-        return false; 
-    }
-}
+// function goToResume() {
+//     var ans = confirm(`Downloading Resume`);
+//     if  (ans == true) {
+//     } else {
+//         resumeLink.removeAttribute("download");
+//         resumeLink.removeAttribute("href");
+//         return false; 
+//     }
+// }
 // Tejas Hande
 // tejasamolhande@gmail.com
 // 8600828734
 
 
+// ##########################################################################################################
+
+
+function goToResume() {
+    var resumeLink = document.getElementById("resumeLink");
+    var fileName = "Resume-Tejas-Hande.pdf"; // Adjust the file name as needed
+
+    var ans = confirm(`Downloading Resume`);
+    if (ans == true) {
+        // Proceed with download
+        resumeLink.setAttribute("download", fileName);
+        return true; // Allow the default action (download)
+    } else {
+        // Cancel the download and open the resume in the browser
+        resumeLink.removeAttribute("download");
+        resumeLink.setAttribute("href", fileName); // Set href attribute to the file name
+        return false; // Prevent the default action (download)
+    }
+}
+
+
+
+var pageTitle = document.getElementById('documentTitle');
+    var originalTitle = pageTitle.textContent;
+
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        // Change document title when the tab is hidden
+        pageTitle.textContent = 'Please Come Back🫣!';
+      } else {
+        // Restore original document title when the tab is visible again
+        pageTitle.textContent = originalTitle;
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
