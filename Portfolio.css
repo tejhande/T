@@ -397,3 +397,38 @@ tejasamolhande@gmail.com
 	margin: 0px; 
 }
 
+
+
+/* ################################################################################################## */
+
+
+
+::-webkit-scrollbar{
+	/* background-color: white; */
+	width: 5px;
+	border: 2px solid #000000 ; /* Chrome,Safari,Opera */
+}
+::-webkit-scrollbar-thumb{
+	background-color:red;
+	border-radius: 30%;
+}
+
+.my-card:hover{
+	background-color: red;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lead-para {
+	display: flex;
+	text-align: justify;
+}
+
+.small-para{
+	display: flex;
+	text-align: justify;
+}
+.my-card{
+	height: 100%;
+	width: 100%;
+}
+
