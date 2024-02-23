@@ -62,7 +62,7 @@ function form_submit(event) {
 
 function goToResume() {
     var resumeLink = document.getElementById("resumeLink");
-    var fileName = "Resume-Tejas-Hande.pdf"; // Adjust the file name as needed
+    var fileName = "Tejas's Resume-hackerresume.pdf"; // Adjust the file name as needed
 
     var ans = confirm(`Downloading Resume`);
     if (ans == true) {
