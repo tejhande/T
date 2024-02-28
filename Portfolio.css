@@ -6,6 +6,7 @@ body {
 	padding: 0; 
 	box-sizing: border-box; 
 	font-family: 'Poppins', sans-serif; 
+	background-color: #5cbfe6;
 } 
 #home{
 
@@ -220,6 +221,7 @@ body {
 
 .contact-details { 
 	width: 50%; 
+	margin-left: 50px;
 } 
 .contact-text:hover{
 	text-decoration:underline solid;
