@@ -16,9 +16,9 @@
     <link rel="icon" type="image/x-icon" href="Tejas.jpg">
   </head>
 
-  <body>
+  <body oncontextmenu="return false" onload="myFunc()">
     <!-- Navbar header section -->
-    <header class="header">
+    <header class="header"> 
       <nav class="navbar">
         <div class="logo">
           <img  src="me.jpeg" alt="Me" height="50px" width="auto" class="logo-icon" class="logo"/>
@@ -62,7 +62,7 @@
         </div>
         <div class="intro-buttons">
           <a href="https://wa.me/918600828734?text=Hi%20Tejas" target="_blank"><button class="btn common-btn">Hire Me</button></a>
-          <a id="resumeLink" href="Resume-Tejas-Hande.pdf" target="_blank" download=""><button id="myResume" class="btn ghost-btn" onclick="goToResume()" >Get Resume</button></a>
+          <a id="resumeLink" href="Tejas's Resume-hackerresume.pdf" target="_blank" download=""><button id="myResume" class="btn ghost-btn" onclick="goToResume()" >Get Resume</button></a>
         </div>
       </div>
     </section>
@@ -78,7 +78,7 @@
             <div class="my-card port-card">
               <div class="image">
                 <img src="http://tinyurl.com/ynch37kn" alt="Web Design Image" />
-              </div>
+              </div class="cardBelowImg">
               <h3 class="greet-heading blue-text">Web Design</h3>
               <p class="small-para blue-text">Designing</p>
             </div>
@@ -90,7 +90,7 @@
                   src="web_devlopment.jpeg"
                   alt="Web Development Image"
                 />
-              </div>
+              </div class="cardBelowImg">
               <h3 class="greet-heading blue-text">Web Development</h3>
               <p class="small-para blue-text">Development</p>
             </div>
@@ -99,7 +99,7 @@
             <div class="my-card port-card">
               <div class="image">
                 <img src="python_logo.png" alt="Python Image" />
-              </div>
+              </div class="cardBelowImg">
               <h3 class="greet-heading blue-text">Python</h3>
               <p class="small-para blue-text">Automation</p>
             </div>
@@ -111,18 +111,18 @@
               <div class="image">
                 <img
                   src="content_writing.jpeg"
-                  alt="Content Writting Image"
+                  alt="WordPress Image"
                 />
-              </div>
-              <h3 class="greet-heading blue-text">Content Writing</h3>
-              <p class="small-para blue-text">Writing</p>
+              </div class="cardBelowImg">
+              <h3 class="greet-heading blue-text">WordPress</h3>
+              <p class="small-para blue-text">Web Development</p>
             </div>
           </div>
           <div class="my-col">
             <div class="my-card port-card">
               <div class="image">
                 <img src="html_css.png" alt="HTML CSS Image" />
-              </div>
+              </div class="cardBelowImg">
               <h3 class="greet-heading blue-text">HTML & CSS</h3>
               <p class="small-para blue-text">Markup</p>
             </div>
@@ -134,7 +134,7 @@
                   src="video_editing.jpeg"
                   alt="Video Editing Image"
                 />
-              </div>
+              </div class="cardBelowImg">
               <h3 class="greet-heading blue-text">Video Editing</h3>
               <p class="small-para blue-text">Editing</p>
             </div>
@@ -201,11 +201,12 @@
           <div class="my-col">
             <div class="my-card">
               <div class="icon">
-                <i class="fas fa-quote-left"></i>
+                <!-- <i class="fas fa-quote-left"></i> -->
+                <i class="fa-brands fa-wordpress"></i>
               </div>
-              <h3 class="greet-heading blue-text"><a href="https://en.wikipedia.org/wiki/Content_writing_services" target="_blank">Content Writting</a></h3>
+              <h3 class="greet-heading blue-text"><a href="https://en.wikipedia.org/wiki/WordPress" target="_blank">WordPress</a></h3>
               <p class="small-para">
-                Content writing is the craft of creating written material for various platforms and purposes. It involves crafting engaging, informative, and persuasive content tailored to a specific audience. Content writers use their skills to produce articles, blog posts, social media updates, and more. Effective content writing is not only about conveying information but also about capturing the audience's attention and maintaining their interest. It requires a keen understanding of the target audience, the ability to adapt writing style to different contexts, and often involves incorporating search engine optimization (SEO) techniques to enhance online visibility. Content writing is a dynamic field that plays a crucial role in digital communication, shaping narratives, and influencing audience perceptions.
+                WordPress (also known as WP or WordPress.org) is a web content management system. It was originally created as a tool to publish blogs but has evolved to support publishing other web content, including more traditional websites, mailing lists and Internet forum, media galleries, membership sites, learning management systems and online stores. Available as free and open-source software, WordPress is among the most popular content management systems WordPress also features integrated link management, a search engine–friendly, clean permalink structure; the ability to assign multiple categories to posts; and support for tagging of posts. Automatic filters are also included, providing standardized formatting and styling of text in posts (for example, converting regular quotes to smart quotes). 
               </p>
             </div>
           </div>
@@ -243,14 +244,18 @@
       <div class="contact-content">
 		<div class="contact-form-container">
       			<h1 class="greet-heading">Get In Touch</h1>
-      				<form class="contact-form" id="myForm" onsubmit="return form_submit(event)">
-         				<input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" />
-          				<input class="form-controls" type="email" placeholder="Enter Your Email" required/>
-          				<input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="(\+91)?[0-9]{10}" /> 
+      				<!-- <form class="contact-form" id="myForm" onsubmit="return form_submit(event)"> -->
+      				<form class="contact-form" id="myForm" netlify
+              name="contact" method="POST" data-netlify="true" onSubmit="submit"
+              data-netlify-honeypot="bot-field" action="/404/"
+              >
+              <input class="d-none" name="bot-field" />
+         				<input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" name="name" />
+          				<input class="form-controls" type="email" placeholder="Enter Your Email" required name="email"/>
+          				<input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="(\+91)?[0-9]{10}" name="number" /> 
           				<textarea class="form-controls" placeholder="Write your message" name="message"></textarea>
           				<input class="form-btn btn common-btn" type="submit" value="Send Message" />
       				</form>
-<!-- 			<div class="visme_d" data-title="Contact Form" data-url="1jmnvmy3-contact-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="31632"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> -->
   		</div>
 	      
 <!-- <div class="contact-form-container"><h1 class="greet-heading">Get In Touch</h1><form class="contact-form" id="myForm" ><input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" /><input class="form-controls" type="email" placeholder="Enter Your Email" required/><input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="+^[0-9]{10}$"/> <textarea class="form-controls" placeholder="Write your message" name="message" id="" ></textarea><input class="form-btn btn common-btn" type="submit" value="Send Message" onclick="form_submit()" /> </form> </div> -->
@@ -290,7 +295,7 @@
                   <i class="fab fa-github"></i>
                 </a>
                 <li class="footer-list-items">
-                  <a class="footer-links" href="https://www.linkedin.com/in/tejashande/" target="_blank">
+                  <a class="footer-links" href="https://www.linkedin.com/in/tejas-hande-900552244/" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                   </a>
                 </li>
