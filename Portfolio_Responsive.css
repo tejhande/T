@@ -168,6 +168,18 @@
 	.footer-list-items { 
 		margin: 0; 
 	} 
+	#home{
+
+		background-image: url("bg.jpg");
+	}
+	.linkedin{
+		display:none;
+	}
+	.hero .intro { 
+		text-align: center; 
+		margin: 0 5rem; 
+		/* margin-left: 0; */
+	} 
 }
 
 /* Tejas Hande
