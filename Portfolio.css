@@ -366,11 +366,6 @@ body {
 	color: #363D73; 
 }
 
-/* Tejas Hande
-tejasamolhande@gmail.com
-8600828734 */
-
-
 
 /* Addition */
 .logo{
@@ -437,3 +432,33 @@ tejasamolhande@gmail.com
 	width: 100%;
 }
 
+/* Linkedin CSS  */
+.badge-base {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .badge-base:hover {
+    transform: translateY(-3px);
+  }
+
+  .badge-base__link {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #0077b5; /* LinkedIn blue */
+  }
+
+  .badge-base__link:hover {
+    background-color: #005ea3; /* Darker shade of LinkedIn blue on hover */
+  }
+
+
+
+/* Tejas Hande
+tejasamolhande@gmail.com
+8600828734 */
