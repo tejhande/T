@@ -32,7 +32,7 @@ function form_submit(event) {
     event.preventDefault(); 
     var form = document.getElementById("myForm");
     if (form.checkValidity()) {
-        window.location.href = '404.html';
+        window.location.href = 'success.html';
     } else {
         alert("Please fill out all required fields correctly.");
     }
