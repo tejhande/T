@@ -6,6 +6,8 @@ body {
 	padding: 0; 
 	box-sizing: border-box; 
 	font-family: 'Poppins', sans-serif; 
+	
+	background-image: linear-gradient(to bottom right, #a7c5eb, #f6f7f8)
 /* 	background-color: #5cbfe6; */
 } 
 #home{
