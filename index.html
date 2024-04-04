@@ -249,12 +249,12 @@
       				<form class="contact-form" id="myForm" action="https://api.web3forms.com/submit" method="POST">
 
               <input type="hidden" name="access_key" value="4f06f6b3-35cc-4ff5-931b-2f96f0b7e0c9">
-
+					<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
          				<input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" name="name" />
           				<input class="form-controls" type="email" placeholder="Enter Your Email" required name="email"/>
           				<input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="(\+91)?[0-9]{10}" name="number" /> 
           				<textarea class="form-controls" placeholder="Write your message" name="message"></textarea>
-					  <div class="h-captcha" data-captcha="true"></div>
+<!-- 					  <div class="h-captcha" data-captcha="true"></div> -->
           				<input class="form-btn btn common-btn" type="submit" value="Send Message" />
       				</form>
   		</div>
