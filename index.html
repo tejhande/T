@@ -65,8 +65,8 @@
           <a id="resumeLink" href="assets/Resume.pdf" target="_blank" download=""><button id="myResume" class="btn ghost-btn" onclick="goToResume()" >Get Resume</button></a>
         </div>
       </div>
-	    <div class="badge-base LI-profile-badge linkedin" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="tejashande" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/tejashande?trk=profile-badge">Tejas Hande</a></div>
-	    <!-- <div class="badge-base linkedin" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="tejashande" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/tejashande?trk=profile-badge">Tejas Hande</a></div> -->
+	    <!-- <div class="badge-base LI-profile-badge linkedin" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="tejashande" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/tejashande?trk=profile-badge">Tejas Hande</a></div> -->
+	    <div class="badge-base linkedin" data-locale="en_US" data-size="large" data-theme="light" data-type="HORIZONTAL" data-vanity="tejashande" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/tejashande?trk=profile-badge">Tejas Hande</a></div>
     </section>
 
     <!-- Portfolio Section -->
@@ -246,15 +246,16 @@
 		<div class="contact-form-container">
       			<h1 class="greet-heading">Get In Touch</h1>
       				<form class="contact-form" id="myForm" action="https://api.web3forms.com/submit" method="POST">
-
-              <input type="hidden" name="access_key" value="4f06f6b3-35cc-4ff5-931b-2f96f0b7e0c9">
-					<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-         				<input class="form-controls" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" name="name" />
-          				<input class="form-controls" type="email" placeholder="Enter Your Email" required name="email"/>
-          				<input class="form-controls" type="tel" placeholder="Enter Your Phone" required pattern="(\+91)?[0-9]{10}" name="number" /> 
-          				<textarea class="form-controls" placeholder="Write your message" name="message"></textarea>
-					  <div class="h-captcha" data-captcha="true"></div>
-          				<input class="form-btn btn common-btn" type="submit" value="Send Message" />
+                <input type="hidden" name="access_key" value="be6405ea-eec2-4a3e-8a22-f9ed823c3b4f">
+                <input type="hidden" name="subject" value="New Form Submission">
+                <input type="hidden" name="redirect" value="https://tejashande.vercel.app/assets/success.html">
+                <input type="hidden" name="from_name" value="Portfolio">
+					      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+         				<input class="form-controls" name="name" type="text" placeholder="Enter Your Name" required pattern="[a-zA-Z\s]+" />
+          			<input class="form-controls" name="email" type="email" placeholder="Enter Your Email" required />
+          			<input class="form-controls" name="number" type="tel" placeholder="Enter Your Phone" required pattern="(\+91)?[0-9]{10}" /> 
+          			<textarea class="form-controls" placeholder="Write your message" name="message"></textarea>
+          			<input class="form-btn btn common-btn" type="submit" value="Send Message" />
       				</form>
   		</div>
 
