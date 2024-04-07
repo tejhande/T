@@ -220,7 +220,7 @@ body {
 }
 
 .contact-form .form-btn {
-  width: 80%;
+  width: 39%;
 }
 
 .contact-details {
@@ -451,3 +451,11 @@ body {
 /* Tejas Hande
 tejasamolhande@gmail.com
 8600828734 */
+
+.button-group {
+  display: flex; /* Use flexbox to arrange items horizontally */
+}
+
+.form-btn {
+  margin-right: 10px; /* Add some space between buttons */
+}
