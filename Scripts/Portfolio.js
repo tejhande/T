@@ -60,6 +60,27 @@ function handleVisibilityChange() {
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  var links = document.querySelectorAll('.links');
+  
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      var targetId = this.getAttribute('href');
+      var targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        var offsetTop = targetElement.offsetTop;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+
 // Tejas Hande
 // tejasamolhande@gmail.com
 // 8600828734

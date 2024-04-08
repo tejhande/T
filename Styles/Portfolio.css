@@ -6,8 +6,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-
-  background-image: linear-gradient(to top left, #a7c5eb, #f6f7f8);
+  background-image: linear-gradient(to bottom right, #b2a8f4, #9798e2);
+  /* background-image: linear-gradient(to top left, #a7c5eb, #f6f7f8); */
   /* 	background-color: #5cbfe6; */
 }
 #home {
@@ -437,8 +437,9 @@ body {
 
 .badge-base__link {
   display: block;
-  padding: 10px 20px;
+  padding: 5px 20px;
   font-size: 18px;
+  width: 86%;
   color: #fff;
   text-decoration: none;
   background-color: #0077b5; /* LinkedIn blue */
