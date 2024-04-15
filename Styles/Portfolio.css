@@ -6,7 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(to bottom right, #b2a8f4, #9798e2);
+  background-image: linear-gradient(to bottom right, #efedff, #c6c6eb);
   /* background-image: linear-gradient(to top left, #a7c5eb, #f6f7f8); */
   /* 	background-color: #5cbfe6; */
 }
@@ -95,7 +95,7 @@ body {
 .about {
   display: flex;
   align-items: center;
-  background-image: linear-gradient(355deg, #170f25, #255de0);
+  background-image: linear-gradient(264deg, #405cd7, #405cd7);
   justify-content: space-between;
   width: 100%;
 }
