@@ -120,7 +120,7 @@ body {
 
 .port-card {
   padding: 0 !important;
-  background: none !important;
+  /* background: none !important; */
   border: 2px solid #000;
 }
 
@@ -136,6 +136,10 @@ body {
 }
 .port-card:hover {
   transform: scale(1.1);
+}
+
+.back{
+  background-color: #712ff5;
 }
 
 /* Services section styles */
@@ -158,6 +162,15 @@ body {
 .my-row .my-col {
   text-align: center;
   width: 30%;
+}
+
+.my-card1 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
 }
 
 .my-card {
@@ -362,7 +375,7 @@ body {
 }
 
 .blue-text {
-  color: #363d73;
+  color: #000;
 }
 
 /* Addition */
@@ -404,6 +417,10 @@ body {
   border-radius: 30%;
 }
 
+.my-card1:hover {
+  background-color: red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .my-card:hover {
   background-color: red;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
