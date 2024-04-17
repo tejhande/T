@@ -171,7 +171,16 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  background: #3498DB; /* Blue background */
+  color: #FFFFFF; /* White text */
 }
+
+.my-card1:hover {
+  background-color: #E74C3C; /* Red background on hover */
+  color: #FFFFFF; /* White text on hover */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .my-card {
   text-align: center;
@@ -413,14 +422,10 @@ body {
   border: 2px solid #000000; /* Chrome,Safari,Opera */
 }
 ::-webkit-scrollbar-thumb {
-  background-color: red;
+  background-color: rgb(66, 1, 1);
   border-radius: 30%;
 }
 
-.my-card1:hover {
-  background-color: red;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 .my-card:hover {
   background-color: red;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
