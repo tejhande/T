@@ -11,7 +11,7 @@ body {
   /* 	background-color: #5cbfe6; */
 }
 #home {
-  background-image: url("/images/bg1.jpg");
+  background-image: url("/images/bg1.webp");
   justify-content: space-around;
 }
 
@@ -66,7 +66,7 @@ body {
 
 /* Main Hero Section Styles */
 .hero {
-  background-image: url("/images/bg1.jpg");
+  background-image: url("/images/bg1.webp");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   width: 100%;
