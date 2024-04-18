@@ -44,18 +44,25 @@ function goToResume() {
   }
 }
 
-var pageTitle = document.getElementById("documentTitle");
-var originalTitle = pageTitle.textContent;
+// Define variables to store original and changed titles
+const originalTitle = document.title;
+const changedTitle = "Please Come Back🫣!";
 
+// Function to handle visibility change
 function handleVisibilityChange() {
+  // Check if the document is hidden
   if (document.hidden) {
     // Change document title when the tab is hidden
-    pageTitle.textContent = "Please Come Back🫣!";
+    document.title = changedTitle;
   } else {
     // Restore original document title when the tab is visible again
-    pageTitle.textContent = originalTitle;
+    document.title = originalTitle;
   }
 }
+
+// Add event listener for visibility change
+document.addEventListener("visibilitychange", handleVisibilityChange);
+
 
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
