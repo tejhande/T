@@ -19,7 +19,10 @@ body {
   background-image: url("/images/bg1.webp");
   justify-content: space-around;
 }
-
+#contact {
+  background-image: url("/images/11.jpeg");
+  justify-content: space-around;
+}
 /* Header Navbar Styles */
 .navbar {
   display: flex;
