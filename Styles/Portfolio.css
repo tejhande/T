@@ -20,7 +20,15 @@ body {
   justify-content: space-around;
 }
 #contact {
-  background-image: url("/images/11.jpeg");
+  background-image: url("/images/contact.jpeg");
+  justify-content: space-around;
+}
+#portfolio {
+  background-image: url("/images/portfolio.jpeg");
+  justify-content: space-around;
+}
+#services {
+  background-image: url("/images/services.jpeg");
   justify-content: space-around;
 }
 /* Header Navbar Styles */
