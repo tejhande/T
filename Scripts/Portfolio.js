@@ -80,6 +80,19 @@ window.addEventListener('offline', handleOnlineStatusChangeIndex);
 // Call handleOnlineStatusChangeIndex once to check if the user is offline when the script loads
 handleOnlineStatusChangeIndex();
 
+// Register service worker 
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('Scripts/service-worker.js')
+        .then(function(registration) {
+          console.log('Service worker registered with scope: ', registration.scope);
+        }, function(err) {
+          console.error('Service worker registration failed: ', err);
+        });
+    });
+  }
+
+
 // Add event listener for visibility change
 document.addEventListener("visibilitychange", handleVisibilityChange);
 

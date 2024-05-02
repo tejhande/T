@@ -102,6 +102,19 @@
 
     // Call handleOnlineStatusChange404 once to check if the user is online when the script loads
     handleOnlineStatusChange404();
+
+    // <!-- Register service worker -->
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('Scripts/service-worker.js')
+        .then(function(registration) {
+          console.log('Service worker registered with scope: ', registration.scope);
+        }, function(err) {
+          console.error('Service worker registration failed: ', err);
+        });
+    });
+  }
 </script>
 </body>
 </html>
