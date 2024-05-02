@@ -87,15 +87,17 @@
     function redirectToIndex() {
         window.location.href = '/index.html';
     }
-
-    // Function to handle online status change
-    function handleOnlineStatusChange404() {
-        // Check if the browser is now online
-        if (navigator.onLine) {
-            // Redirect to the index page
+// Function to handle online status change and redirect to index page on refresh when online
+function handleOnlineStatusChangeRedirectOnRefresh() {
+    // Check if the browser is now online
+    if (navigator.onLine) {
+        // Listen for beforeunload event
+        window.addEventListener('beforeunload', function(event) {
+            // Redirect to the index page only if the user is online
             redirectToIndex();
-        }
+        });
     }
+}
 
     // Listen for the 'online' event
     window.addEventListener('online', handleOnlineStatusChange404);
