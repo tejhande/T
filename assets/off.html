@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline</title>
+  <link rel="shortcut icon" href="/images/off.png" type="image/x-icon">
+  <style>
+    body {
+      background: radial-gradient(circle, #222, #000);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      perspective: 1000px;
+      overflow: hidden;
+    }
+
+    .offline-container {
+      text-align: center;
+      transform-style: preserve-3d;
+      animation: rotate 10s infinite linear, pulse 2s infinite alternate;
+    }
+
+    .offline-message {
+      font-size: 3rem;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      transform: translateZ(100px);
+      animation: glitch 2s infinite;
+    }
+
+    .offline-icon {
+      font-size: 6rem;
+      transform: translateZ(200px);
+      color: #ff6f61;
+      text-shadow: 0 0 20px rgba(255, 111, 97, 0.5);
+      animation: glitch 2s infinite reverse;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+      25% {
+        text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5), -2px -2px 5px rgba(0, 255, 0, 0.5);
+      }
+      50% {
+        text-shadow: -2px 2px 5px rgba(0, 0, 255, 0.5), 2px -2px 5px rgba(255, 255, 0, 0.5);
+      }
+      75% {
+        text-shadow: 2px -2px 5px rgba(255, 0, 255, 0.5), -2px 2px 5px rgba(0, 255, 255, 0.5);
+      }
+      100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-container">
+    <div class="offline-message">You're Offline</div>
+    <div class="offline-icon">&#x26A0;</div>
+  </div>
+  <script>
+    // Function to redirect to the index page if the user is online
+    function redirectToIndex() {
+        window.location.href = '/index.html';
+    }
+
+    // Function to handle online status change
+    function handleOnlineStatusChange404() {
+        // Check if the browser is now online
+        if (navigator.onLine) {
+            // Redirect to the index page
+            redirectToIndex();
+        }
+    }
+
+    // Listen for the 'online' event
+    window.addEventListener('online', handleOnlineStatusChange404);
+
+    // Call handleOnlineStatusChange404 once to check if the user is online when the script loads
+    handleOnlineStatusChange404();
+</script>
+</body>
+</html>

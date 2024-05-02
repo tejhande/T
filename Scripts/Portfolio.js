@@ -60,6 +60,26 @@ function handleVisibilityChange() {
   }
 }
 
+ // Function to redirect to the 404 page if the user is offline
+ function redirectTo404() {
+  window.location.href = 'assets/off.html';
+}
+
+// Function to handle online status change
+function handleOnlineStatusChangeIndex() {
+  // Check if the browser is now offline
+  if (!navigator.onLine) {
+      // Redirect to the 404 page
+      redirectTo404();
+  }
+}
+
+// Listen for the 'offline' event
+window.addEventListener('offline', handleOnlineStatusChangeIndex);
+
+// Call handleOnlineStatusChangeIndex once to check if the user is offline when the script loads
+handleOnlineStatusChangeIndex();
+
 // Add event listener for visibility change
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
