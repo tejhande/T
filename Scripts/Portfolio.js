@@ -81,16 +81,11 @@ window.addEventListener('offline', handleOnlineStatusChangeIndex);
 handleOnlineStatusChangeIndex();
 
 // Register service worker 
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('Scripts/service-worker.js')
-        .then(function(registration) {
-          console.log('Service worker registered with scope: ', registration.scope);
-        }, function(err) {
-          console.error('Service worker registration failed: ', err);
-        });
-    });
-  }
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('Scripts/service-worker.js');
+  });
+}
 
 
 // Add event listener for visibility change
