@@ -87,6 +87,21 @@ if ('serviceWorker' in navigator) {
   });
 }
 
+window.addEventListener('online', () => {
+  // Redirect the user to the index page when they come back online
+  window.location.href = '/';
+});
+
+window.addEventListener('offline', () => {
+  // Show the "you're offline" page when the user goes offline
+  window.location.href = OFFLINE_URL;
+});
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker registered'))
+    .catch(error => console.error('Error registering Service Worker:', error));
+}
 
 // Add event listener for visibility change
 document.addEventListener("visibilitychange", handleVisibilityChange);

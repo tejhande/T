@@ -1,21 +1,23 @@
-const cacheName = 'offline-cache';
-const offlineURL = 'assets/off.html';
+const CACHE_NAME = 'offline-cache';
+const OFFLINE_URL = '/offline.html';
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(cacheName)
-      .then((cache) => cache.add(offlineURL))
+    caches.open(CACHE_NAME)
+      .then(cache => cache.add(OFFLINE_URL))
   );
 });
 
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return caches.match(offlineURL);
-      })
-  );
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => caches.match(OFFLINE_URL))
+    );
+  } else {
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => caches.match(event.request))
+    );
+  }
 });
