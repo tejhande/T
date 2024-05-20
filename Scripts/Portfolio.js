@@ -134,3 +134,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // Tejas Hande
 // tejasamolhande@gmail.com
 // 8600828734
+
+function reloadIframeContent() {
+  document.getElementById('externalSite').src = document.getElementById('externalSite').src;
+}
+
+// Reload the content within the iframe every 5 seconds
+setInterval(reloadIframeContent, 5000);
