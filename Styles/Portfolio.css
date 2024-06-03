@@ -15,6 +15,15 @@ body {
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none;
 }
+
+.section {
+  /* display: flex; */
+  justify-content: space-around;
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center; /* Centers the background image */
+}
+
 #home {
   background-image: url("/images/bg1.webp");
   justify-content: space-around;
@@ -579,7 +588,7 @@ body {
 
 /* Form Buttons  */
 input[type="submit"], input[type="reset"] {
-  padding: 12px 16px;
+  /* padding: 12px 16px; */
   border: none;
   background: black;
   color: white;
