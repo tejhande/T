@@ -182,6 +182,14 @@
     /* margin: 0 5rem; */
     /* margin-left: 0; */
   }
+
+  
+#goTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 15%;
+  right: 30px;
+  z-index: 99;
 }
 
 /* Tejas Hande
