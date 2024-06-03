@@ -587,20 +587,44 @@ body {
   white-space: nowrap;
 }
 
-/* Form Buttons  */
-input[type="submit"], input[type="reset"] {
-  /* padding: 12px 16px; */
-  border: none;
-  background: black;
-  color: white;
+
+
+/* Common styles for both buttons */
+.button-group .form-btn {
+  border: none !important;
+  color: white !important;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
-  background: darkgray;
-  color:#ffffff;
+/* Specific styles for the submit button */
+.button-group .form-btn[type="submit"] {
+  background: green !important;
+}
+
+.button-group .form-btn[type="submit"]:hover {
+  background: rgb(0, 100, 0) !important; /* Darker green */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 100, 0, 0.5);
+  color: #ffffff !important;
+}
+
+/* Specific styles for the reset button */
+.button-group .form-btn[type="reset"] {
+  background: black !important;
+}
+
+.button-group .form-btn[type="reset"]:hover {
+  background: rgb(139, 0, 0) !important; /* Dark red */
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+  color: #ffffff !important;
 }
 
 
+
+/* GoTo Top Button  */
 
 #goTopBtn {
   display: none;
