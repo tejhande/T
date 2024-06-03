@@ -601,6 +601,34 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 
+
+#goTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 1.5rem; /* Adjust the icon size */
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0.5;
+}
+
+#goTopBtn:hover {
+  transform: translateY(-5px);
+  opacity: 1;
+}
+
+#goTopBtn:active {
+  transform: translateY(2px);
+}
+
+#home #goTopBtn {
+  display: none;
+}
+
+
+
+
 /* Tejas Hande
 tejasamolhande@gmail.com
 8600828734 */
