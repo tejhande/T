@@ -179,7 +179,7 @@
   }
   .hero .intro {
     text-align: center;
-    margin: 0 5rem;
+    /* margin: 0 5rem; */
     /* margin-left: 0; */
   }
 }
