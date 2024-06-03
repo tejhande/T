@@ -136,6 +136,8 @@ document.addEventListener('DOMContentLoaded', function() {
 // Get the button
 const goTopBtn = document.getElementById("goTopBtn");
 
+let isTouching = false;
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {
   scrollFunction();
@@ -149,10 +151,21 @@ function scrollFunction() {
   }
 }
 
+// Add touch event listeners to detect if the user is touching the display
+window.addEventListener("touchstart", function() {
+  isTouching = true;
+}, { passive: true });
+
+window.addEventListener("touchend", function() {
+  isTouching = false;
+}, { passive: true });
+
 // When the user clicks on the button, scroll to the top of the document with smooth animation
 goTopBtn.addEventListener("click", smoothScrollToTop);
 
 function smoothScrollToTop() {
+  if (isTouching) return;
+
   const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
 
   if (currentScroll > 0) {
@@ -160,7 +173,6 @@ function smoothScrollToTop() {
     window.scrollTo(0, currentScroll - (currentScroll / 10));
   }
 }
-
 
 
 // Tejas Hande
