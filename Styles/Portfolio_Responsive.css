@@ -136,7 +136,7 @@
 
   .my-row .my-col {
     text-align: center;
-    width: 100%;
+    width: 95%;
   }
 
   .contact {
@@ -199,8 +199,8 @@
 }
 
 .my-card{
-  max-width: 90%;
-  margin-left: 5px;
+  max-width: 85%;
+  margin-left: 14px;
 }
 
 }
