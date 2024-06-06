@@ -179,8 +179,9 @@
   }
   .hero .intro {
     text-align: center;
+    justify-content: center;
     /* margin: 0 5rem; */
-    /* margin-left: 0; */
+    margin-left: 10px;
   }
 
   
@@ -190,7 +191,19 @@
   bottom: 1%;
   right: -2%;
   z-index: 99;
-}}
+}
+
+.my-card1{
+  max-width: 90%;
+  margin-left: 20px;
+}
+
+.my-card{
+  max-width: 90%;
+  margin-left: 5px;
+}
+
+}
 
 /* Tejas Hande
 tejasamolhande@gmail.com
