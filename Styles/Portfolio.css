@@ -670,3 +670,152 @@ body {
 /* Tejas Hande
 tejasamolhande@gmail.com
 8600828734 */
+
+
+
+
+
+.T-card {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.T-card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.T-card:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.T-card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.T-card:hover .T-card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.T-card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.T-card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.T-card:hover svg {
+  scale: 0;
+  transform: rotate(-45deg);
+}
+
+/* Additional styles for the portfolio layout */
+.T-portfolio {
+  padding: 40px 0;
+}
+
+.T-portfolio-heading {
+  margin-bottom: 20px;
+}
+
+.T-portfolio-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.T-my-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.T-my-col {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.T-my-card1 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.T-my-card1:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.T-back {
+  background-color: #fff;
+}
+
+.T-port-card .T-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+.T-cardBelowImg {
+  padding: 10px;
+}
+
+.T-greet-heading {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.T-small-para {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+.T-blue-text {
+  color: #007bff;
+}
+  
+.T-my-heading {
+  text-align: center !important;
+}
+
+.T-greet-heading {
+  text-align: center !important;
+}
+
+.T-small-para {
+  text-align: center !important;
+  text-justify: inter-word !important;
+}

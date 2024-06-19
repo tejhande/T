@@ -68,6 +68,10 @@
       url("./Images/heroImg3.avif");
   }
 
+  .T-my-col {
+    flex: 1 1 100% !important;
+    }
+
   .sub-heading {
     color: #fff9f9cc;
   }
