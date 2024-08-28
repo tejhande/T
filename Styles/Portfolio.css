@@ -667,13 +667,6 @@ body {
 
 
 
-/* Tejas Hande
-tejasamolhande@gmail.com
-8600828734 */
-
-
-
-
 
 .T-card {
   position: relative;
@@ -806,7 +799,6 @@ tejasamolhande@gmail.com
 .T-blue-text {
   color: #007bff;
 }
-  
 .T-my-heading {
   text-align: center !important;
 }
@@ -819,3 +811,67 @@ tejasamolhande@gmail.com
   text-align: center !important;
   text-justify: inter-word !important;
 }
+
+
+
+/* Tejas Hande
+tejasamolhande@gmail.com
+8600828734 */
+
+
+.T-show-more-btn {
+  position: relative;
+  padding: 12px 35px;
+  background: #2c3e50;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ecf0f1;
+  border: 3px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #3498db8c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.T-show-more-btn:hover {
+  background: transparent;
+  color: #3498db;
+  box-shadow: 0 0 25px #3498db8c;
+}
+
+.T-show-more-btn .star {
+  position: absolute;
+  background-color: #fff;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  opacity: 0;
+  filter: drop-shadow(0 0 10px #fff);
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.T-show-more-btn .star-1 { top: 20%; left: 20%; }
+.T-show-more-btn .star-2 { top: 45%; left: 45%; }
+.T-show-more-btn .star-3 { top: 40%; left: 40%; }
+.T-show-more-btn .star-4 { top: 20%; left: 40%; }
+.T-show-more-btn .star-5 { top: 25%; left: 45%; }
+.T-show-more-btn .star-6 { top: 5%; left: 50%; }
+
+.T-show-more-btn:hover .star {
+  opacity: 1;
+  animation: twinkle 1s infinite alternate;
+}
+
+.T-show-more-btn:hover .star-1 { top: -80%; left: -30%; }
+.T-show-more-btn:hover .star-2 { top: -25%; left: 10%; }
+.T-show-more-btn:hover .star-3 { top: 55%; left: 25%; }
+.T-show-more-btn:hover .star-4 { top: 30%; left: 80%; }
+.T-show-more-btn:hover .star-5 { top: 25%; left: 115%; }
+.T-show-more-btn:hover .star-6 { top: 5%; left: 60%; }
+
+@keyframes twinkle {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.2); opacity: 0.7; }
+}
+

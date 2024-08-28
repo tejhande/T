@@ -178,3 +178,17 @@ function smoothScrollToTop() {
 // Tejas Hande
 // tejasamolhande@gmail.com
 // 8600828734
+
+
+document.getElementById("show-more").addEventListener("click", function() {
+  var moreProjects = document.getElementById("more-projects");
+  var showMoreBtn = document.getElementById("show-more");
+  
+  if (moreProjects.style.display === "none") {
+      moreProjects.style.display = "block";
+      showMoreBtn.textContent = "Show Less";
+  } else {
+      moreProjects.style.display = "none";
+      showMoreBtn.textContent = "Show More";
+  }
+});
