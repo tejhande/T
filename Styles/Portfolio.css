@@ -26,6 +26,7 @@ body {
 
 #home {
   background-image: url("/images/bg1.webp");
+  background-size: auto;
   justify-content: space-around;
 }
 #contact {
