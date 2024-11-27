@@ -70,7 +70,7 @@
 
   .T-my-col {
     flex: 1 1 100% !important;
-    }
+  }
 
   .sub-heading {
     color: #fff9f9cc;
@@ -177,7 +177,8 @@
     margin: 0;
   }
   #home {
-  background-image: url("/images/bg12.webp");  }
+    background-image: url("/images/bg12.webp");
+  }
   .linkedin {
     display: none;
   }
@@ -188,27 +189,89 @@
     margin-left: 10px;
   }
 
-  
-#goTopBtn {
-  display: none;
-  position: fixed;
-  bottom: 1%;
-  right: -2%;
-  z-index: 99;
+  #goTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 1%;
+    right: -2%;
+    z-index: 99;
+  }
+
+  .my-card1 {
+    max-width: 90%;
+    margin-left: 20px;
+  }
+
+  .my-card {
+    max-width: 85%;
+    margin-left: 14px;
+  }
 }
 
-.my-card1{
-  max-width: 90%;
-  margin-left: 20px;
+/* Commit -- 11/27/2024 */
+
+.social-links {
+  text-align: center !important;
+  max-width: 100vw !important; /* Ensure it doesn't exceed viewport width */
+  overflow-x: hidden !important; /* Hide any overflow horizontally */
 }
 
-.my-card{
-  max-width: 85%;
-  margin-left: 14px;
+.footer-menu {
+  display: inline-block !important;
+  width: 100% !important; /* Ensure it takes the full width */
 }
 
+.footer-menu-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: nowrap !important; /* Prevent wrapping */
+  width: 100% !important; /* Ensure the list takes full width */
+}
+
+.footer-list-items {
+  margin: 10px !important;
+}
+
+.footer-links {
+  display: block !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  font-size: 24px !important;
+}
+
+.footer-links i,
+.footer-links img {
+  width: 30px !important;
+  height: 30px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.footer-links i:hover,
+.footer-links img:hover {
+  transform: scale(1.1) !important;
+}
+
+/* Mobile & Tablet Styling */
+@media (max-width: 768px) {
+  .footer-menu-list {
+    flex-direction: row !important; /* Force horizontal layout */
+    justify-content: center !important; /* Center items horizontally */
+  }
+
+  .footer-list-items {
+    margin: 8px !important; /* Adjust margin for smaller screens */
+  }
+
+  .footer-links i,
+  .footer-links img {
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
 
 /* Tejas Hande
 tejasamolhande@gmail.com
-8600828734 */ 
+8600828734 */
