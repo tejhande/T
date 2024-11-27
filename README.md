@@ -1,11 +1,11 @@
 # Tejas Hande - Portfolio
 
-Welcome to my personal portfolio! This website showcases my skills, projects, and services in web development, design, and programming. It highlights the projects I have built using various technologies, including WordPress, HTML, CSS, JavaScript, and React.js.
+Welcome to my personal portfolio! Here, you'll discover my expertise in web development, design, and programming, alongside a showcase of the projects I've crafted. Explore how I’ve utilized technologies like WordPress, HTML, CSS, JavaScript, and React.js to bring innovative ideas to life. Dive into my journey of creativity and technical skills!
 
 ![Portfolio Preview](https://tejashande.vercel.app/images/portfolio.webp)
 
 ## 🚀 About Me
-I am a final-year Computer Engineering student passionate about web development and programming. I specialize in creating dynamic, responsive websites and applications, focusing on user experience and performance.
+I’m a final-year Computer Engineering student with a deep passion for web development and programming. I thrive on building dynamic and responsive websites and applications, prioritizing exceptional user experiences and optimized performance.
 
 ### Portfolio URL:
 [Visit my Portfolio](https://tejashande.vercel.app)
@@ -25,11 +25,11 @@ I am a final-year Computer Engineering student passionate about web development 
 
 ## ✨ Features
 
-- Responsive and mobile-friendly design
-- Showcases my web development projects and skills
-- Detailed information about my services (web design, development, and Python)
-- Interactive UI built with modern web technologies
-- Social media and contact links for easy connection
+- Fully responsive and mobile-friendly design for seamless viewing across devices.
+- Comprehensive showcase of my web development projects and technical skills.
+- In-depth details about my services, including web design, development, and Python solutions.
+- Engaging and interactive UI crafted with modern web technologies.
+- Convenient social media and contact links for effortless communication and networking.
 
 ---
 
