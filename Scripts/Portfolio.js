@@ -29,7 +29,7 @@ function form_submit(event) {
 
 function goToResume() {
   var resumeLink = document.getElementById("resumeLink");
-  var fileName = "assets/Resume.pdf"; // Adjust the file name as needed
+  var fileName = "assets/Tejas_Hande_Web_Developer_Resume.pdf"; // Adjust the file name as needed
 
   var ans = confirm(`Downloading Resume`);
   if (ans == true) {
@@ -60,78 +60,77 @@ function handleVisibilityChange() {
   }
 }
 
- // Function to redirect to the 404 page if the user is offline
- function redirectTo404() {
-  window.location.href = 'assets/off.html';
+// Function to redirect to the 404 page if the user is offline
+function redirectTo404() {
+  window.location.href = "assets/off.html";
 }
 
 // Function to handle online status change
 function handleOnlineStatusChangeIndex() {
   // Check if the browser is now offline
   if (!navigator.onLine) {
-      // Redirect to the 404 page
-      redirectTo404();
+    // Redirect to the 404 page
+    redirectTo404();
   }
 }
 
 // Listen for the 'offline' event
-window.addEventListener('offline', handleOnlineStatusChangeIndex);
+window.addEventListener("offline", handleOnlineStatusChangeIndex);
 
 // Call handleOnlineStatusChangeIndex once to check if the user is offline when the script loads
 handleOnlineStatusChangeIndex();
 
-// Register service worker 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('service-worker.js');
+// Register service worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js");
   });
 }
 
-window.addEventListener('online', () => {
+window.addEventListener("online", () => {
   // Redirect the user to the index page when they come back online
-  window.location.href = '/';
+  window.location.href = "/";
 });
 
-window.addEventListener('offline', () => {
+window.addEventListener("offline", () => {
   // Show the "you're offline" page when the user goes offline
   window.location.href = OFFLINE_URL;
 });
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js')
-    .then(() => console.log('Service Worker registered'))
-    .catch(error => console.error('Error registering Service Worker:', error));
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js")
+    .then(() => console.log("Service Worker registered"))
+    .catch((error) =>
+      console.error("Error registering Service Worker:", error)
+    );
 }
 
 // Add event listener for visibility change
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
-
 document.addEventListener("visibilitychange", handleVisibilityChange);
 
+document.addEventListener("DOMContentLoaded", function () {
+  var links = document.querySelectorAll(".links");
 
-document.addEventListener('DOMContentLoaded', function() {
-  var links = document.querySelectorAll('.links');
-  
-  links.forEach(function(link) {
-    link.addEventListener('click', function(e) {
+  links.forEach(function (link) {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
-      
-      var targetId = this.getAttribute('href');
+
+      var targetId = this.getAttribute("href");
       var targetElement = document.querySelector(targetId);
-      
+
       if (targetElement) {
         var offsetTop = targetElement.offsetTop;
         window.scrollTo({
           top: offsetTop,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     });
   });
 });
-
-
 
 // Get the button
 const goTopBtn = document.getElementById("goTopBtn");
@@ -139,7 +138,7 @@ const goTopBtn = document.getElementById("goTopBtn");
 let isTouching = false;
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
@@ -152,13 +151,21 @@ function scrollFunction() {
 }
 
 // Add touch event listeners to detect if the user is touching the display
-window.addEventListener("touchstart", function() {
-  isTouching = true;
-}, { passive: true });
+window.addEventListener(
+  "touchstart",
+  function () {
+    isTouching = true;
+  },
+  { passive: true }
+);
 
-window.addEventListener("touchend", function() {
-  isTouching = false;
-}, { passive: true });
+window.addEventListener(
+  "touchend",
+  function () {
+    isTouching = false;
+  },
+  { passive: true }
+);
 
 // When the user clicks on the button, scroll to the top of the document with smooth animation
 goTopBtn.addEventListener("click", smoothScrollToTop);
@@ -166,29 +173,28 @@ goTopBtn.addEventListener("click", smoothScrollToTop);
 function smoothScrollToTop() {
   if (isTouching) return;
 
-  const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+  const currentScroll =
+    document.documentElement.scrollTop || document.body.scrollTop;
 
   if (currentScroll > 0) {
     window.requestAnimationFrame(smoothScrollToTop);
-    window.scrollTo(0, currentScroll - (currentScroll / 10));
+    window.scrollTo(0, currentScroll - currentScroll / 10);
   }
 }
-
 
 // Tejas Hande
 // tejasamolhande@gmail.com
 // 8600828734
 
-
-document.getElementById("show-more").addEventListener("click", function() {
+document.getElementById("show-more").addEventListener("click", function () {
   var moreProjects = document.getElementById("more-projects");
   var showMoreBtn = document.getElementById("show-more");
-  
+
   if (moreProjects.style.display === "none") {
-      moreProjects.style.display = "block";
-      showMoreBtn.textContent = "Show Less";
+    moreProjects.style.display = "block";
+    showMoreBtn.textContent = "Show Less";
   } else {
-      moreProjects.style.display = "none";
-      showMoreBtn.textContent = "Show More";
+    moreProjects.style.display = "none";
+    showMoreBtn.textContent = "Show More";
   }
 });
