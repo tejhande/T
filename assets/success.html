@@ -1,47 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Successfully Submitted</title>
-    <link rel="shortcut icon" href="/images/success.webp" type="image/x-icon" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/success.webp" type="image/x-icon">
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        /* background-color: #f9f9f9; */
-        background-image: linear-gradient(to bottom right, #c9d6ff, #2974fa);
-        margin: 0;
-        padding: 0;
-      }
+        /* Custom styles for form confirmation page */
+        body {
+            background: linear-gradient(135deg, #a5b4fc, #8b5cf6);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
 
-      .container {
-        max-width: 600px;
-        margin: 50px auto;
-        background-color: #fff;
-        /* background-image: linear-gradient(to bottom right, #c9d6ff, #2974fa); */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-      h1 {
-        color: #00ff08;
-        font-size: 3em;
-      }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
 
-      .success-logo {
-        width: 100px;
-        margin-bottom: 20px;
-      }
+        .confirmation-container {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: slideUp 0.7s ease-out;
+        }
+
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            animation: bounce 1.5s ease infinite;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+            background-color: #8b5cf6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-button:hover {
+            background-color: #6d28d9;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 640px) {
+            .confirmation-container {
+                padding: 1.5rem;
+            }
+
+            .success-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 0.5rem 1rem;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="/images/success.webp" alt="Success" class="success-logo" />
-      <h1>Form Successfully Submitted</h1>
-      <p>Thank you for your submission!</p>
-      <p>We have received your form successfully.</p>
+</head>
+<body>
+    <div class="confirmation-container">
+        <svg class="success-icon" fill="none" stroke="#10b981" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Form Successfully Submitted</h1>
+        
+        <p class="text-gray-600 mb-6">Thank you for your submission! We appreciate your time and will respond to you shortly.</p>
+        
+        <button class="cta-button w-full md:w-auto">
+          <a href="/">Return to Home</a>  
+        </button>
     </div>
-  </body>
+</body>
 </html>

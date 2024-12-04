@@ -198,3 +198,12 @@ document.getElementById("show-more").addEventListener("click", function () {
     showMoreBtn.textContent = "Show More";
   }
 });
+
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  // Get the value of the name input field
+  var name = document.querySelector('input[name="name"]').value;
+  
+  // Update the subject field dynamically
+  document.getElementById('subject').value = name;
+});
+
