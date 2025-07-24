@@ -29,7 +29,7 @@ function form_submit(event) {
 
 function goToResume() {
   var resumeLink = document.getElementById("resumeLink");
-  var fileName = "assets/TejasHande_Fresher_Java.pdf"; // Adjust the file name as needed
+  var fileName = "assets/Tejas_Hande_Fresher_Java.pdf"; // Adjust the file name as needed
 
   var ans = confirm(`Downloading Resume`);
   if (ans == true) {
