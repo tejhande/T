@@ -29,7 +29,7 @@ function form_submit(event) {
 
 function goToResume() {
   var resumeLink = document.getElementById("resumeLink");
-  var fileName = "assets/Tejas_Hande_Fresher_Java.pdf"; // Adjust the file name as needed
+  var fileName = "assets/TejasHande_Fresher_Java.pdf"; // Adjust the file name as needed
 
   var ans = confirm(`Downloading Resume`);
   if (ans == true) {
@@ -199,11 +199,10 @@ document.getElementById("show-more").addEventListener("click", function () {
   }
 });
 
-document.getElementById('myForm').addEventListener('submit', function(event) {
+document.getElementById("myForm").addEventListener("submit", function (event) {
   // Get the value of the name input field
   var name = document.querySelector('input[name="name"]').value;
-  
-  // Update the subject field dynamically
-  document.getElementById('subject').value = name;
-});
 
+  // Update the subject field dynamically
+  document.getElementById("subject").value = name;
+});
