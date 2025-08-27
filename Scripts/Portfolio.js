@@ -1,17 +1,39 @@
+const OFFLINE_URL = "assets/off.html";
 const hamburger = document.getElementById("hamburger");
 const menu = document.querySelector(".menu");
 
 hamburger.addEventListener("click", function () {
   const hamIcon = this.querySelector(".hamburger-icon");
   const crossIcon = this.querySelector(".cross-icon");
+  const menuLinks = menu.querySelectorAll("a.links"); // Select all focusable links in the menu
+
   if (hamIcon.style.display === "none") {
+    // Menu is currently open, close it
     hamIcon.style.display = "inline-block";
     menu.style.display = "none";
     crossIcon.style.display = "none";
+    menu.setAttribute("aria-hidden", "true"); // Hide from assistive tech
+    menuLinks.forEach(link => link.setAttribute("tabindex", "-1")); // Make links non-focusable
   } else {
+    // Menu is currently closed, open it
     crossIcon.style.display = "inline-block";
     hamIcon.style.display = "none";
     menu.style.display = "block";
+    menu.setAttribute("aria-hidden", "false"); // Show to assistive tech
+    menuLinks.forEach(link => link.removeAttribute("tabindex")); // Make links focusable
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menu = document.querySelector(".menu");
+  const menuLinks = menu.querySelectorAll("a.links");
+
+  if (menu.style.display === "none" || window.getComputedStyle(menu).display === "none") {
+    menu.setAttribute("aria-hidden", "true");
+    menuLinks.forEach(link => link.setAttribute("tabindex", "-1"));
+  } else {
+    menu.setAttribute("aria-hidden", "false");
+    menuLinks.forEach(link => link.removeAttribute("tabindex"));
   }
 });
 
@@ -83,7 +105,11 @@ handleOnlineStatusChangeIndex();
 // Register service worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js");
+    navigator.serviceWorker.register("Scripts/service-worker.js")
+    // .then(() => console.log("Service Worker registered"))
+    .catch((error) =>
+      console.error("Error registering Service Worker:", error)
+    );
   });
 }
 
@@ -96,15 +122,6 @@ window.addEventListener("offline", () => {
   // Show the "you're offline" page when the user goes offline
   window.location.href = OFFLINE_URL;
 });
-
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/service-worker.js")
-    .then(() => console.log("Service Worker registered"))
-    .catch((error) =>
-      console.error("Error registering Service Worker:", error)
-    );
-}
 
 // Add event listener for visibility change
 document.addEventListener("visibilitychange", handleVisibilityChange);

@@ -83,6 +83,11 @@
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="preload" as="image" href="images/bg1.webp">
 
     <!-- CSS Stylesheets -->
     <link
@@ -91,9 +96,13 @@
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+      media="print" onload="this.media='all'"
     />
-    <link rel="stylesheet" href="Styles/Portfolio.css" />
-    <link rel="stylesheet" href="Styles/Portfolio_Responsive.css" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+    <link rel="stylesheet" href="Styles/Portfolio.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="Styles/Portfolio.css" /></noscript>
+    <link rel="stylesheet" href="Styles/Portfolio_Responsive.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="Styles/Portfolio_Responsive.css" /></noscript>
 
     <!-- Structured Data for Person -->
     <script type="application/ld+json">
@@ -197,6 +206,7 @@
       defer
     ></script>
     <script src="Scripts/Portfolio.js" defer></script>
+    
     <script
       src="https://platform.linkedin.com/badges/js/profile.js"
       async
@@ -211,10 +221,10 @@
       <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="logo">
           <img
-            src="images/1.jpg"
+            src="images/1.webp"
             alt="Tejas Hande"
             height="50"
-            width="auto"
+            width="50"
             class="logo-icon"
           />
           <h2 class="logo-heading">Tejas Hande</h2>
@@ -420,7 +430,7 @@
                   rel="noopener"
                 >
                   <img
-                    src="images/webp.png"
+                    src="images/webp.webp"
                     alt="Image Processing Tools Screenshot"
                   />
                 </a>
@@ -473,7 +483,7 @@
               <div class="T-image">
                 <a href="assets/insta.html" rel="noopener noreferrer">
                   <img
-                    src="images/extension-preview.png"
+                    src="images/extension-preview.webp"
                     alt="Chrome Extension for Instagram Login"
                   />
                 </a>
@@ -591,7 +601,7 @@
         </p>
       </div>
       <div class="about-image">
-        <img src="images/about.webp" alt="Tejas Hande - About Me" />
+                <img src="images/about.webp" alt="Tejas Hande - About Me" />
       </div>
     </section>
 
@@ -851,7 +861,7 @@
     <!-- Footer section -->
     <footer class="footer" role="contentinfo">
       <div class="footer-content text-center">
-        <h4>
+        <p>
           Copyright © 2024 All rights reserved | This portfolio website is
           created by
           <a
@@ -861,7 +871,7 @@
             style="color: white"
             >Tejas Hande</a
           >.
-        </h4>
+        </p>
         <div class="social-links">
           <div class="footer-menu">
             <ul class="footer-menu-list">
@@ -894,9 +904,8 @@
                 >
                   <img
                     src="images/kite-logo.webp"
-                    class="kite"
                     alt="kite"
-                    aria-label="Zerodha Kite"
+                    class="kite"
                   />
                 </a>
               </li>
@@ -926,8 +935,9 @@
                   href="https://www.instagram.com/tejas25___/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Visit Tejas Hande's Instagram profile"
                 >
-                  <i class="fab fa-instagram" aria-label="Instagram"></i>
+                  <i class="fab fa-instagram"></i>
                 </a>
               </li>
             </ul>
@@ -949,4 +959,6 @@
 
 <!-- Tejas Hande
 tejasamolhande@gmail.com
+8600828734 -->
+jasamolhande@gmail.com
 8600828734 -->

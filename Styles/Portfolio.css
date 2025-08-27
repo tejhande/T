@@ -1,5 +1,5 @@
 /* Styles defined for the desktop or the bigger screen devices*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 
 body {
   margin: 0;
@@ -30,11 +30,11 @@ body {
   justify-content: space-around;
 }
 #contact {
-  background-image: url("/images/contact.jpeg");
+  background-image: url("/images/contact.webp");
   justify-content: space-around;
 }
 #portfolio {
-  background-image: url("/images/portfolio.jpeg");
+  /* background-image: url("/images/portfolio.webp"); */
   justify-content: space-around;
 }
 #services {
@@ -135,7 +135,7 @@ body {
 
 .about .about-image img {
   height: 400px;
-  width: 450px;
+  width: 400px;
   padding: 5rem 5rem 5rem 1rem;
 }
 
@@ -454,6 +454,7 @@ body {
   height: auto;
   width: 35px;
   margin: 0px;
+  object-fit: contain;
 }
 
 ::-webkit-scrollbar {
@@ -798,7 +799,7 @@ body {
 }
 
 .T-blue-text {
-  color: #007bff;
+  color: #000066;
 }
 .T-my-heading {
   text-align: center !important;
