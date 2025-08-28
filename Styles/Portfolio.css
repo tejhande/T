@@ -346,10 +346,14 @@ body {
   margin: 0;
 }
 
+section h1.my-heading {
+  font-size: 2.5rem;
+}
+
 .sub-heading {
   margin: 0;
   font-size: 0.8rem;
-  color: #ccc;
+  color: #555;
   font-weight: lighter;
 }
 
@@ -384,14 +388,14 @@ body {
 
 .common-btn:hover {
   background-color: #fff;
-  color: #35a99c;
+  color: #2a786a;
   border: 2px solid #35a99c;
   outline: none;
 }
 
 .ghost-btn {
   background-color: #fff;
-  color: #35a99c;
+  color: #2a786a;
   border: 2px solid #35a99c;
   outline: none;
 }
@@ -551,7 +555,7 @@ body {
 }
 
 .intro-buttons .resume-btn {
-  color: #3399ff;
+  color: #007bff;
 }
 
 .intro-buttons .hire-btn-text,
