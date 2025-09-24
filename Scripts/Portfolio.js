@@ -13,27 +13,30 @@ hamburger.addEventListener("click", function () {
     menu.style.display = "none";
     crossIcon.style.display = "none";
     menu.setAttribute("aria-hidden", "true"); // Hide from assistive tech
-    menuLinks.forEach(link => link.setAttribute("tabindex", "-1")); // Make links non-focusable
+    menuLinks.forEach((link) => link.setAttribute("tabindex", "-1")); // Make links non-focusable
   } else {
     // Menu is currently closed, open it
     crossIcon.style.display = "inline-block";
     hamIcon.style.display = "none";
     menu.style.display = "block";
     menu.setAttribute("aria-hidden", "false"); // Show to assistive tech
-    menuLinks.forEach(link => link.removeAttribute("tabindex")); // Make links focusable
+    menuLinks.forEach((link) => link.removeAttribute("tabindex")); // Make links focusable
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const menu = document.querySelector(".menu");
   const menuLinks = menu.querySelectorAll("a.links");
 
-  if (menu.style.display === "none" || window.getComputedStyle(menu).display === "none") {
+  if (
+    menu.style.display === "none" ||
+    window.getComputedStyle(menu).display === "none"
+  ) {
     menu.setAttribute("aria-hidden", "true");
-    menuLinks.forEach(link => link.setAttribute("tabindex", "-1"));
+    menuLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
   } else {
     menu.setAttribute("aria-hidden", "false");
-    menuLinks.forEach(link => link.removeAttribute("tabindex"));
+    menuLinks.forEach((link) => link.removeAttribute("tabindex"));
   }
 });
 
@@ -51,7 +54,7 @@ function form_submit(event) {
 
 function goToResume() {
   var resumeLink = document.getElementById("resumeLink");
-  var fileName = "assets/TejasHande_Fresher_Java.pdf"; // Adjust the file name as needed
+  var fileName = "assets/TejasHande_Fresher_MERN.pdf"; // Adjust the file name as needed
 
   var ans = confirm(`Downloading Resume`);
   if (ans == true) {
@@ -105,11 +108,12 @@ handleOnlineStatusChangeIndex();
 // Register service worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("Scripts/service-worker.js")
-    // .then(() => console.log("Service Worker registered"))
-    .catch((error) =>
-      console.error("Error registering Service Worker:", error)
-    );
+    navigator.serviceWorker
+      .register("Scripts/service-worker.js")
+      // .then(() => console.log("Service Worker registered"))
+      .catch((error) =>
+        console.error("Error registering Service Worker:", error)
+      );
   });
 }
 
