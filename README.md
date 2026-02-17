@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio! Here, you'll discover my expertise in web development, design, and programming, alongside a showcase of the projects I've crafted. Explore how I’ve utilized technologies like WordPress, HTML, CSS, JavaScript, and React.js to bring innovative ideas to life. Dive into my journey of creativity and technical skills!
 
-![Portfolio Preview](https://tejashande.shop/images/portfolio.webp)
+![Portfolio Preview](https://tejashande.vercel.app/images/portfolio.webp)
 
 ## 🚀 About Me
 
@@ -10,7 +10,7 @@ I’m a final-year Computer Engineering student with a deep passion for web deve
 
 ### Portfolio URL:
 
-[Visit my Portfolio](https://tejashande.shop)
+[Visit my Portfolio](https://tejashande.vercel.app)
 
 ---
 
@@ -62,7 +62,7 @@ I’m a final-year Computer Engineering student with a deep passion for web deve
 
 ### Hosting
 
-The portfolio is hosted at [Vercel](https://tejashande.shop), or you can host it using platforms like Netlify or GitHub Pages by deploying directly from this repository.
+The portfolio is hosted at [Vercel](https://tejashande.vercel.app), or you can host it using platforms like Netlify or GitHub Pages by deploying directly from this repository.
 
 ---
 
@@ -72,12 +72,10 @@ Some of the featured projects included in this portfolio are:
 
 1. **[Windspeed - Restaurant Food Delivery Website](https://vercel.windspeed.app)**:  
    A food delivery platform similar to Zomato and Swiggy, allowing users to browse restaurants, place orders, and track deliveries.
-
    - **Tech Stack**: HTML, CSS, JavaScript, React.js
 
 2. **[SCRAPEGRAPH-AI](https://scrapegraphai.com/)**:  
    An open-source Python-based web scraper integrated with AI, used for extracting data from various websites and presenting it in a structured format.
-
    - **Tech Stack**: Python, Scrapy, AI models
 
 3. **[Chrome Extension - Instagram Login Security Enhancer](https://github.com/tejhande/InstaTejasLog)**:  
