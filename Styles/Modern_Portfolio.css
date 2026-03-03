@@ -572,6 +572,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -607,20 +608,27 @@ a {
 /* Card images */
 .T-port-card .T-image {
   width: 100%;
+  height: 200px;
   overflow: hidden;
+  background: rgba(0, 0, 0, 0.2); /* Fallback background for contained images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .T-port-card .T-image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Show full image without cropping */
   display: block;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   transition: transform var(--transition-slow);
 }
 
 .T-my-card1:hover .T-image img {
-  transform: scale(1.06);
+  transform: scale(1.1);
 }
 
 /* Card text area */
@@ -629,7 +637,16 @@ a {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.25rem;
+  min-height: 180px; /* Ensure all cards have at least this height for content */
+}
+
+.category-label {
+  font-size: 0.85rem;
+  color: var(--accent-2) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
 }
 
 .T-greet-heading {
