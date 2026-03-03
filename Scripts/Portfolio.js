@@ -192,15 +192,10 @@ window.addEventListener(
 goTopBtn.addEventListener("click", smoothScrollToTop);
 
 function smoothScrollToTop() {
-  if (isTouching) return;
-
-  const currentScroll =
-    document.documentElement.scrollTop || document.body.scrollTop;
-
-  if (currentScroll > 0) {
-    window.requestAnimationFrame(smoothScrollToTop);
-    window.scrollTo(0, currentScroll - currentScroll / 10);
-  }
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 
 // Tejas Hande
