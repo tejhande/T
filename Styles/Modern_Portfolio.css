@@ -140,6 +140,13 @@ a {
   margin: 0;
   color: var(--text-primary);
 }
+.greet-heading1{
+  font-size: 16px !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin: 0;
+  color: var(--text-primary);
+}
 
 .sub-heading {
   font-size: clamp(0.85rem, 1.5vw, 1rem);
