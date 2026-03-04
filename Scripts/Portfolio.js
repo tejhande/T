@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 1,
     title: "OBFS - Agri Intelligence",
-    category: "Agri-Tech + React + Node.js",
+    category: "Agri-Tech + React + Node.js [MERN]",
     description: "An outcome-based digital agriculture system helping farmers optimize fertilizer usage based on soil data, crop stage, and weather conditions.",
     image: "images/obfs.webp",
     link: "https://obfs.vercel.app",
