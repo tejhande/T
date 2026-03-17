@@ -177,6 +177,15 @@ function renderProjects() {
 
 document.addEventListener("DOMContentLoaded", function () {
   renderProjects();
+
+  // Initialize GitHub Calendar
+  if (typeof GitHubCalendar === "function") {
+    GitHubCalendar(".calendar", "tejhande", {
+      responsive: true,
+      global_stats: false,
+      tooltips: true
+    });
+  }
   
   const menu = document.querySelector(".menu");
   const menuLinks = menu.querySelectorAll("a.links");
