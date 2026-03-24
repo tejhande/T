@@ -29,7 +29,7 @@ const projectsData = [
     category: "Agri-Tech + MERN + AI",
     description: "An outcome-based digital agriculture system helping farmers optimize fertilizer usage based on soil data, crop stage, and weather conditions and much more..",
     image: "images/obfs.webp",
-    link: "https://obfs.vercel.app",
+    link: "https://obfs.in",
     sortOrder: 1,
     featured: true
   },
