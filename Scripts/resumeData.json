@@ -224,6 +224,19 @@
             "updatedAt": "2024-07-05T08:02:03.489Z"
         },
         {
+            "id": 11,
+            "name": "QuantumJet KrishiOS",
+            "description": "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather. Optimized input costs and reduced waste with outcome-based decision intelligence.",
+            "keywords": [
+                "React.js, Python, AI, Satellite Data"
+            ],
+            "url": "https://krishios.quantumjet.co.in/",
+            "sortOrderId": 2,
+            "resumeId": 211992,
+            "createdAt": "2024-07-05T08:02:03.489Z",
+            "updatedAt": "2024-07-05T08:02:03.489Z"
+        },
+        {
             "id": 410511,
             "name": "Food Ordering Application",
             "description": "  - **User Interface:** Designed a user-friendly interface with React.js for seamless navigation and interaction.\n  - **State Management:** Implemented state management using React hooks and context API.\n  - **Responsive Design:** Ensured the app is fully responsive and works well on various devices and screen sizes.\n  - **Order Management:** Created functionalities for adding, updating, and removing items from the cart.\n  - **Integration:** Integrated with a mock backend API to handle data fetching and submission.\n  - **Performance Optimization:** Optimized the app for better performance and faster load times.\n",
@@ -231,7 +244,7 @@
                 "React.js, Vite. HTML, CSS, JavaScript"
             ],
             "url": "https://windspeed.vercel.app/",
-            "sortOrderId": 2,
+            "sortOrderId": 3,
             "resumeId": 211992,
             "createdAt": "2024-03-29T15:57:39.413Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"
@@ -244,7 +257,7 @@
                 "WordPress, PHP, HTML, CSS, JavaScript"
             ],
             "url": "http://tej.000.pe",
-            "sortOrderId": 3,
+            "sortOrderId": 4,
             "resumeId": 211992,
             "createdAt": "2024-03-06T14:26:07.375Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"
@@ -257,7 +270,7 @@
                 "WordPress, PHP, HTML, CSS, JavaScript"
             ],
             "url": "http://stem.000.pe/",
-            "sortOrderId": 4,
+            "sortOrderId": 5,
             "resumeId": 211992,
             "createdAt": "2024-03-29T15:52:46.556Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"
@@ -270,7 +283,7 @@
                 "Python"
             ],
             "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
-            "sortOrderId": 5,
+            "sortOrderId": 6,
             "resumeId": 211992,
             "createdAt": "2024-07-05T07:29:17.833Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"

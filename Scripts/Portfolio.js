@@ -29,7 +29,7 @@ const projectsData = [
     category: "Agri-Tech + MERN + AI",
     description: "An outcome-based digital agriculture system helping farmers optimize fertilizer usage based on soil data, crop stage, and weather conditions and much more..",
     image: "images/obfs.webp",
-    link: "https://obfs.vercel.app",
+    link: "https://obfs.in",
     sortOrder: 1,
     featured: true
   },
@@ -44,13 +44,23 @@ const projectsData = [
     featured: true
   },
   {
+    id: 11,
+    title: "QuantumJet KrishiOS",
+    category: "Agritech + Satellite + AI",
+    description: "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather.",
+    image: "images/KrishiOS.png",
+    link: "https://krishios.quantumjet.co.in/",
+    sortOrder: 3,
+    featured: true
+  },
+  {
     id: 3,
     title: "Marsstrong International",
     category: "HTML + CSS + JavaScript",
     description: "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
     image: "images/marsstrong.webp",
     link: "https://marsstrong.biz",
-    sortOrder: 3,
+    sortOrder: 4,
     featured: true
   },
   {
@@ -60,7 +70,7 @@ const projectsData = [
     description: "Windspeed is a production-grade full-stack clothes delivery system, also published in an international research journal.",
     image: "images/bajarangi.webp",
     link: "https://bajarangi.vercel.app/",
-    sortOrder: 4,
+    sortOrder: 5,
     featured: true
   },
   {
@@ -70,7 +80,7 @@ const projectsData = [
     description: "A web-based tool offering multiple image operations like crop, rotate, resize, enlarge, cartoonize, convert to WebP, and create collages.",
     image: "images/webp.webp",
     link: "https://9images.vercel.app/",
-    sortOrder: 5,
+    sortOrder: 6,
     featured: true
   },
   {
@@ -80,7 +90,7 @@ const projectsData = [
     description: "A Chrome extension that logs into Instagram using session cookies, bypassing the need for manual entry of credentials.",
     image: "images/extension-preview.webp",
     link: "assets/insta.html",
-    sortOrder: 6,
+    sortOrder: 7,
     featured: true
   },
   {
@@ -90,7 +100,7 @@ const projectsData = [
     description: "A live code editor that takes HTML, CSS, and JavaScript input and instantly renders the output on the same page.",
     image: "images/code.webp",
     link: "https://tejhande.github.io/CodeEditor/",
-    sortOrder: 7,
+    sortOrder: 8,
     featured: false
   },
   {
@@ -100,7 +110,7 @@ const projectsData = [
     description: "Contributed to the widely used Create React App repository, helping improve the React ecosystem.",
     image: "images/create-react-app-logo.webp",
     link: "https://github.com/facebook/create-react-app/pull/17061",
-    sortOrder: 8,
+    sortOrder: 9,
     featured: false
   },
   {
@@ -110,7 +120,7 @@ const projectsData = [
     description: "Active contributor to ScrapeGraph AI, an open-source library for automated web scraping using LLMs.",
     image: "images/scrapegraph-ai-logo.webp",
     link: "https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande",
-    sortOrder: 9,
+    sortOrder: 10,
     featured: false
   },
   {
@@ -120,7 +130,7 @@ const projectsData = [
     description: "Explore my complete open-source journey, including contributions, repositories, and technical experiments.",
     image: "images/github-contributions.webp",
     link: "https://github.com/tejhande",
-    sortOrder: 10,
+    sortOrder: 11,
     featured: false
   }
 ];
