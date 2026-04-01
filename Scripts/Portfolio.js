@@ -91,7 +91,7 @@ const projectsData = [
     image: "images/extension-preview.webp",
     link: "assets/insta.html",
     sortOrder: 7,
-    featured: true
+    featured: false
   },
   {
     id: 7,

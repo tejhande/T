@@ -171,6 +171,11 @@ a {
   line-height: 1.8;
   color: var(--text-secondary);
   text-align: justify;
+  margin-bottom: 1.25rem;
+}
+
+.lead-para:last-of-type {
+  margin-bottom: 0;
 }
 
 .blue-text,
