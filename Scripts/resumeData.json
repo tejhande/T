@@ -211,19 +211,6 @@
             "updatedAt": "2024-07-05T08:02:03.489Z"
         },
         {
-            "id": 397439,
-            "name": "Marsstrong Website",
-            "description": "- **Landing Page Development:** Created a landing page for Marsstrong International using HTML, CSS, JavaScript, and Bootstrap to provide a professional and user-friendly interface.\n - **HTML/CSS:** Structured and styled the landing page for optimal user experience.\n  - **JavaScript:** Added interactive elements to enhance user engagement.\n  - **Bootstrap:** Utilized Bootstrap for responsive design and quick development.\n  - **Performance Optimization:** Ensured fast load times and cross-browser compatibility.\n  - **SEO:** Implemented basic SEO practices to improve search engine visibility.\n",
-            "keywords": [
-                "HTML, CSS, JavaScript"
-            ],
-            "url": "https://github.com/tejhande/Marsstrong",
-            "sortOrderId": 1,
-            "resumeId": 211992,
-            "createdAt": "2024-02-23T19:47:56.558Z",
-            "updatedAt": "2024-07-05T08:02:03.489Z"
-        },
-        {
             "id": 11,
             "name": "QuantumJet KrishiOS",
             "description": "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather. Optimized input costs and reduced waste with outcome-based decision intelligence.",
@@ -231,7 +218,7 @@
                 "React.js, Python, AI, Satellite Data"
             ],
             "url": "https://krishios.quantumjet.co.in/",
-            "sortOrderId": 2,
+            "sortOrderId": 1,
             "resumeId": 211992,
             "createdAt": "2024-07-05T08:02:03.489Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"
@@ -244,9 +231,22 @@
                 "React.js, Vite. HTML, CSS, JavaScript"
             ],
             "url": "https://windspeed.vercel.app/",
-            "sortOrderId": 3,
+            "sortOrderId": 2,
             "resumeId": 211992,
             "createdAt": "2024-03-29T15:57:39.413Z",
+            "updatedAt": "2024-07-05T08:02:03.489Z"
+        },
+        {
+            "id": 12,
+            "name": "QuantumJet™ - Decentralized Synthesis",
+            "description": "A patented Jet-Induced Synthesis Platform decentralizing the global chemical supply chain with modular, CO₂-integrated synthesis units for on-demand manufacturing.",
+            "keywords": [
+                "Patented Tech, JLR, CO2-to-Value"
+            ],
+            "url": "https://quantumjet.co.in",
+            "sortOrderId": 3,
+            "resumeId": 211992,
+            "createdAt": "2024-07-05T08:02:03.489Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"
         },
         {
@@ -276,6 +276,19 @@
             "updatedAt": "2024-07-05T08:02:03.489Z"
         },
         {
+            "id": 397439,
+            "name": "Marsstrong Website",
+            "description": "- **Landing Page Development:** Created a landing page for Marsstrong International using HTML, CSS, JavaScript, and Bootstrap to provide a professional and user-friendly interface.\n - **HTML/CSS:** Structured and styled the landing page for optimal user experience.\n  - **JavaScript:** Added interactive elements to enhance user engagement.\n  - **Bootstrap:** Utilized Bootstrap for responsive design and quick development.\n  - **Performance Optimization:** Ensured fast load times and cross-browser compatibility.\n  - **SEO:** Implemented basic SEO practices to improve search engine visibility.\n",
+            "keywords": [
+                "HTML, CSS, JavaScript"
+            ],
+            "url": "https://github.com/tejhande/Marsstrong",
+            "sortOrderId": 6,
+            "resumeId": 211992,
+            "createdAt": "2024-02-23T19:47:56.558Z",
+            "updatedAt": "2024-07-05T08:02:03.489Z"
+        },
+        {
             "id": 449683,
             "name": "Scrapegraph-ai",
             "description": "   - **Tests for SmartScraperGraph:** Added tests for the SmartScraperGraph using sample text and configuration fixtures to ensure the robustness and accuracy of the scraping algorithms.\n   - **RobotsNode Enhancements:** Developed and updated tests for the RobotsNode, improving test setups and ensuring comprehensive coverage.\n - **SearchLinkNode Refactoring:** Simplified the setup for SearchLinkNode tests, added patching for the execute method, and enhanced assertions for better reliability.\n  - **ScriptCreatorGraph Testing:** Implemented tests for ScriptCreatorGraph and added print execution info for better debugging and transparency.\n   - **FetchNode Testing:** Enhanced tests for FetchNode using mocking techniques to simulate various scenarios and ensure reliability.\n   - **JSON Scraping Pipeline:** Enhanced the JSON scraping pipeline tests to verify the end-to-end functionality of the data extraction and processing.",
@@ -283,7 +296,7 @@
                 "Python"
             ],
             "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
-            "sortOrderId": 6,
+            "sortOrderId": 7,
             "resumeId": 211992,
             "createdAt": "2024-07-05T07:29:17.833Z",
             "updatedAt": "2024-07-05T08:02:03.489Z"

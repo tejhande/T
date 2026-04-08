@@ -54,12 +54,12 @@ const projectsData = [
     featured: true
   },
   {
-    id: 3,
-    title: "Marsstrong International",
-    category: "HTML + CSS + JavaScript",
-    description: "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
-    image: "images/marsstrong.webp",
-    link: "https://marsstrong.biz",
+    id: 12,
+    title: "QuantumJet™ - Decentralized Synthesis",
+    category: "Patented Tech + JLR + CO₂-to-Value",
+    description: "A patented Jet-Induced Synthesis Platform decentralizing the global chemical supply chain with modular, CO₂-integrated synthesis units for on-demand manufacturing.",
+    image: "images/QuantumJet.png",
+    link: "https://quantumjet.co.in",
     sortOrder: 4,
     featured: true
   },
@@ -84,13 +84,23 @@ const projectsData = [
     featured: true
   },
   {
+    id: 3,
+    title: "Marsstrong International",
+    category: "HTML + CSS + JavaScript",
+    description: "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
+    image: "images/marsstrong.webp",
+    link: "https://marsstrong.biz",
+    sortOrder: 7,
+    featured: false
+  },
+  {
     id: 6,
     title: "Insta Login: No 2FA, No Password",
     category: "JavaScript, Chrome Extension API",
     description: "A Chrome extension that logs into Instagram using session cookies, bypassing the need for manual entry of credentials.",
     image: "images/extension-preview.webp",
     link: "assets/insta.html",
-    sortOrder: 7,
+    sortOrder: 8,
     featured: false
   },
   {
@@ -100,7 +110,7 @@ const projectsData = [
     description: "A live code editor that takes HTML, CSS, and JavaScript input and instantly renders the output on the same page.",
     image: "images/code.webp",
     link: "https://tejhande.github.io/CodeEditor/",
-    sortOrder: 8,
+    sortOrder: 9,
     featured: false
   },
   {
@@ -110,7 +120,7 @@ const projectsData = [
     description: "Contributed to the widely used Create React App repository, helping improve the React ecosystem.",
     image: "images/create-react-app-logo.webp",
     link: "https://github.com/facebook/create-react-app/pull/17061",
-    sortOrder: 9,
+    sortOrder: 10,
     featured: false
   },
   {
@@ -120,7 +130,7 @@ const projectsData = [
     description: "Active contributor to ScrapeGraph AI, an open-source library for automated web scraping using LLMs.",
     image: "images/scrapegraph-ai-logo.webp",
     link: "https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande",
-    sortOrder: 10,
+    sortOrder: 11,
     featured: false
   },
   {
@@ -130,7 +140,7 @@ const projectsData = [
     description: "Explore my complete open-source journey, including contributions, repositories, and technical experiments.",
     image: "images/github-contributions.webp",
     link: "https://github.com/tejhande",
-    sortOrder: 11,
+    sortOrder: 12,
     featured: false
   }
 ];
