@@ -5,7 +5,7 @@ const menu = document.querySelector(".menu");
 hamburger.addEventListener("click", function () {
   const hamIcon = this.querySelector(".hamburger-icon");
   const crossIcon = this.querySelector(".cross-icon");
-  const menuLinks = menu.querySelectorAll("a.links"); 
+  const menuLinks = menu.querySelectorAll("a.links");
 
   if (hamIcon.style.display === "none") {
     hamIcon.style.display = "inline-block";
@@ -27,122 +27,145 @@ const projectsData = [
     id: 1,
     title: "OBFS - Agri Intelligence",
     category: "Agri-Tech + MERN + AI",
-    description: "An outcome-based digital agriculture system helping farmers optimize fertilizer usage based on soil data, crop stage, and weather conditions and much more..",
+    description:
+      "An outcome-based digital agriculture system helping farmers optimize fertilizer usage based on soil data, crop stage, and weather conditions and much more..",
     image: "images/obfs.webp",
     link: "https://obfs.in",
     sortOrder: 1,
-    featured: true
+    featured: true,
   },
   {
     id: 2,
     title: "Kling Nuts Website",
     category: "WordPress + Elementor + SEO",
-    description: "A responsive and SEO-optimized website built for the premium peanut butter brand Kling Nuts, focusing on brand visibility and performance.",
+    description:
+      "A responsive and SEO-optimized website built for the premium peanut butter brand Kling Nuts, focusing on brand visibility and performance.",
     image: "images/Klingnuts.webp",
     link: "https://klingnuts.com",
     sortOrder: 2,
-    featured: true
+    featured: true,
   },
   {
     id: 11,
     title: "QuantumJet KrishiOS",
     category: "Agritech + Satellite + AI",
-    description: "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather.",
+    description:
+      "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather.",
     image: "images/KrishiOS.png",
     link: "https://krishios.quantumjet.co.in/",
     sortOrder: 3,
-    featured: true
+    featured: true,
   },
   {
     id: 12,
     title: "QuantumJet™ - Decentralized Synthesis",
     category: "Patented Tech + JLR + CO₂-to-Value",
-    description: "A patented Jet-Induced Synthesis Platform decentralizing the global chemical supply chain with modular, CO₂-integrated synthesis units for on-demand manufacturing.",
+    description:
+      "A patented Jet-Induced Synthesis Platform decentralizing the global chemical supply chain with modular, CO₂-integrated synthesis units for on-demand manufacturing.",
     image: "images/QuantumJet.png",
     link: "https://quantumjet.co.in",
     sortOrder: 4,
-    featured: true
+    featured: true,
   },
   {
     id: 4,
     title: "Clothes Ordering Website",
     category: "MERN Stack",
-    description: "Windspeed is a production-grade full-stack clothes delivery system, also published in an international research journal.",
+    description:
+      "Windspeed is a production-grade full-stack clothes delivery system, also published in an international research journal.",
     image: "images/bajarangi.webp",
     link: "https://bajarangi.vercel.app/",
     sortOrder: 5,
-    featured: true
+    featured: true,
   },
   {
     id: 5,
     title: "Image Processing Tools",
     category: "HTML + CSS + JavaScript",
-    description: "A web-based tool offering multiple image operations like crop, rotate, resize, enlarge, cartoonize, convert to WebP, and create collages.",
+    description:
+      "A web-based tool offering multiple image operations like crop, rotate, resize, enlarge, cartoonize, convert to WebP, and create collages.",
     image: "images/webp.webp",
     link: "https://9images.vercel.app/",
     sortOrder: 6,
-    featured: true
+    featured: false,
   },
   {
     id: 3,
     title: "Marsstrong International",
     category: "HTML + CSS + JavaScript",
-    description: "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
+    description:
+      "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
     image: "images/marsstrong.webp",
     link: "https://marsstrong.biz",
     sortOrder: 7,
-    featured: false
+    featured: false,
   },
   {
     id: 6,
     title: "Insta Login: No 2FA, No Password",
     category: "JavaScript, Chrome Extension API",
-    description: "A Chrome extension that logs into Instagram using session cookies, bypassing the need for manual entry of credentials.",
+    description:
+      "A Chrome extension that logs into Instagram using session cookies, bypassing the need for manual entry of credentials.",
     image: "images/extension-preview.webp",
     link: "assets/insta.html",
     sortOrder: 8,
-    featured: false
+    featured: false,
   },
   {
     id: 7,
     title: "Online Code Editor",
     category: "HTML + CSS + JavaScript",
-    description: "A live code editor that takes HTML, CSS, and JavaScript input and instantly renders the output on the same page.",
+    description:
+      "A live code editor that takes HTML, CSS, and JavaScript input and instantly renders the output on the same page.",
     image: "images/code.webp",
     link: "https://tejhande.github.io/CodeEditor/",
     sortOrder: 9,
-    featured: false
+    featured: false,
   },
   {
     id: 8,
     title: "Create React App",
     category: "Open Source Contribution",
-    description: "Contributed to the widely used Create React App repository, helping improve the React ecosystem.",
+    description:
+      "Contributed to the widely used Create React App repository, helping improve the React ecosystem.",
     image: "images/create-react-app-logo.webp",
     link: "https://github.com/facebook/create-react-app/pull/17061",
     sortOrder: 10,
-    featured: false
+    featured: false,
   },
   {
     id: 9,
     title: "ScrapeGraph AI",
     category: "Open Source Contributor",
-    description: "Active contributor to ScrapeGraph AI, an open-source library for automated web scraping using LLMs.",
+    description:
+      "Active contributor to ScrapeGraph AI, an open-source library for automated web scraping using LLMs.",
     image: "images/scrapegraph-ai-logo.webp",
     link: "https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande",
     sortOrder: 11,
-    featured: false
+    featured: false,
+  },
+  {
+    id: 13,
+    title: "BioMonitor CBG Suite",
+    category: "Industrial AI + MERN + IoT",
+    description:
+      "A data-driven CBG plant intelligence system combining shift reports, lab analytics, and real-time operational monitoring to optimize gas yield, efficiency, and decision-making with AI-powered insights.",
+    image: "images/cbg.png", // add screenshot here
+    link: "https://cbg.quantumjet.co.in/",
+    sortOrder: 0,
+    featured: true,
   },
   {
     id: 10,
     title: "GitHub Profile",
     category: "Open Source Portfolio",
-    description: "Explore my complete open-source journey, including contributions, repositories, and technical experiments.",
+    description:
+      "Explore my complete open-source journey, including contributions, repositories, and technical experiments.",
     image: "images/github-contributions.webp",
     link: "https://github.com/tejhande",
     sortOrder: 12,
-    featured: false
-  }
+    featured: false,
+  },
 ];
 
 function renderProjects() {
@@ -150,11 +173,13 @@ function renderProjects() {
   if (!featuredContainer) return;
 
   const rows = featuredContainer.querySelectorAll(".T-my-row, #more-projects");
-  rows.forEach(row => row.remove());
+  rows.forEach((row) => row.remove());
 
-  const sortedProjects = [...projectsData].sort((a, b) => a.sortOrder - b.sortOrder);
-  const featuredProjects = sortedProjects.filter(p => p.featured);
-  const otherProjects = sortedProjects.filter(p => !p.featured);
+  const sortedProjects = [...projectsData].sort(
+    (a, b) => a.sortOrder - b.sortOrder,
+  );
+  const featuredProjects = sortedProjects.filter((p) => p.featured);
+  const otherProjects = sortedProjects.filter((p) => !p.featured);
 
   const createCard = (project) => `
     <div class="T-my-col">
@@ -191,7 +216,10 @@ function renderProjects() {
     moreProjectsContainer.id = "more-projects";
     moreProjectsContainer.style.display = "none";
     moreProjectsContainer.innerHTML = createRows(otherProjects);
-    showMoreBtnContainer.insertAdjacentHTML("beforebegin", moreProjectsContainer.outerHTML);
+    showMoreBtnContainer.insertAdjacentHTML(
+      "beforebegin",
+      moreProjectsContainer.outerHTML,
+    );
   }
 }
 
@@ -203,14 +231,17 @@ document.addEventListener("DOMContentLoaded", function () {
     GitHubCalendar(".calendar", "tejhande", {
       responsive: true,
       global_stats: false,
-      tooltips: true
+      tooltips: true,
     });
   }
-  
+
   const menu = document.querySelector(".menu");
   const menuLinks = menu.querySelectorAll("a.links");
 
-  if (menu.style.display === "none" || window.getComputedStyle(menu).display === "none") {
+  if (
+    menu.style.display === "none" ||
+    window.getComputedStyle(menu).display === "none"
+  ) {
     menu.setAttribute("aria-hidden", "true");
     menuLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
   } else {
@@ -272,7 +303,9 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("Scripts/service-worker.js")
-      .catch((error) => console.error("Error registering Service Worker:", error));
+      .catch((error) =>
+        console.error("Error registering Service Worker:", error),
+      );
   });
 }
 
