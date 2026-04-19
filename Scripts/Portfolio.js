@@ -263,7 +263,7 @@ function form_submit(event) {
 
 function goToResume() {
   var resumeLink = document.getElementById("resumeLink");
-  var fileName = "assets/TejasHande_Fresher_MERN.pdf";
+  var fileName = "assets/TejasHande_1.5yr_MERN.pdf";
   var ans = confirm(`Downloading Resume`);
   if (ans == true) {
     resumeLink.setAttribute("download", fileName);
