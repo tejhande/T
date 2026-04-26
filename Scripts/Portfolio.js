@@ -40,7 +40,7 @@ const projectsData = [
     category: "WordPress + Elementor + SEO",
     description:
       "A responsive and SEO-optimized website built for the premium peanut butter brand Kling Nuts, focusing on brand visibility and performance.",
-    image: "images/Klingnuts.webp",
+    image: "images/Klingnuts.png",
     link: "https://klingnuts.com",
     sortOrder: 2,
     featured: true,
@@ -95,7 +95,7 @@ const projectsData = [
     category: "HTML + CSS + JavaScript",
     description:
       "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
-    image: "images/marsstrong.webp",
+    image: "images/marsstrong.png",
     link: "https://marsstrong.biz",
     sortOrder: 7,
     featured: false,
@@ -166,6 +166,17 @@ const projectsData = [
     sortOrder: 12,
     featured: false,
   },
+  {
+  id: 14,
+  title: "Naturextrakte Fertilisers LLP",
+  category: "HTML + CSS + JavaScript + SEO",
+  description:
+    "A responsive, SEO-optimized landing page built for an agri-based company, focusing on performance, clean UI, and conversion-driven design.",
+  image: "images/naturextrakte.png", 
+  link: "https://naturextraktefertilisers.in/",
+  sortOrder: 7.5,
+  featured: false,
+},
 ];
 
 function renderProjects() {
