@@ -172,7 +172,7 @@ const projectsData = [
   category: "HTML + CSS + JavaScript + SEO",
   description:
     "A responsive, SEO-optimized landing page built for an agri-based company, focusing on performance, clean UI, and conversion-driven design.",
-  image: "images/naturextrakte.webp", 
+  image: "images/Naturextrakte.webp", 
   link: "https://naturextraktefertilisers.in/",
   sortOrder: 7.5,
   featured: false,
