@@ -40,7 +40,7 @@ const projectsData = [
     category: "WordPress + Elementor + SEO",
     description:
       "A responsive and SEO-optimized website built for the premium peanut butter brand Kling Nuts, focusing on brand visibility and performance.",
-    image: "images/Klingnuts.png",
+    image: "images/Klingnuts.webp",
     link: "https://klingnuts.com",
     sortOrder: 2,
     featured: true,
@@ -51,7 +51,7 @@ const projectsData = [
     category: "Agritech + Satellite + AI",
     description:
       "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather.",
-    image: "images/KrishiOS.png",
+    image: "images/KrishiOS.webp",
     link: "https://krishios.quantumjet.co.in/",
     sortOrder: 3,
     featured: true,
@@ -62,7 +62,7 @@ const projectsData = [
     category: "Patented Tech + JLR + CO₂-to-Value",
     description:
       "A patented Jet-Induced Synthesis Platform decentralizing the global chemical supply chain with modular, CO₂-integrated synthesis units for on-demand manufacturing.",
-    image: "images/QuantumJet.png",
+    image: "images/QuantumJet.webp",
     link: "https://quantumjet.co.in",
     sortOrder: 4,
     featured: true,
@@ -95,7 +95,7 @@ const projectsData = [
     category: "HTML + CSS + JavaScript",
     description:
       "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
-    image: "images/marsstrong.png",
+    image: "images/marsstrong.webp",
     link: "https://marsstrong.biz",
     sortOrder: 7,
     featured: false,
@@ -150,7 +150,7 @@ const projectsData = [
     category: "Industrial AI + MERN + IoT",
     description:
       "A data-driven CBG plant intelligence system combining shift reports, lab analytics, and real-time operational monitoring to optimize gas yield, efficiency, and decision-making with AI-powered insights.",
-    image: "images/cbg.png", // add screenshot here
+    image: "images/cbg.webp", // add screenshot here
     link: "https://cbg.quantumjet.co.in/",
     sortOrder: 0,
     featured: true,
@@ -172,7 +172,7 @@ const projectsData = [
   category: "HTML + CSS + JavaScript + SEO",
   description:
     "A responsive, SEO-optimized landing page built for an agri-based company, focusing on performance, clean UI, and conversion-driven design.",
-  image: "images/naturextrakte.png", 
+  image: "images/naturextrakte.webp", 
   link: "https://naturextraktefertilisers.in/",
   sortOrder: 7.5,
   featured: false,
