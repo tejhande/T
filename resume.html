@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tejas Hande - Resume</title>
+
+  <!-- Favicon matching the portfolio -->
+  <link rel="icon" type="image/webp" sizes="32x32" href="images/Tejas.webp" />
+  <link rel="icon" type="image/webp" sizes="16x16" href="images/Tejas.webp" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/Tejas.webp" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      background-color: #0f172a; /* Slate 900 background matching a modern dark portfolio theme */
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #1e293b; /* Slate 800 */
+      color: #f8fafc;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #334155;
+      z-index: 10;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand img {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .brand-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-secondary {
+      background-color: transparent;
+      color: #94a3b8;
+      border: 1px solid #475569;
+    }
+    .btn-secondary:hover {
+      background-color: #334155;
+      color: #f8fafc;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 0.2);
+    }
+    .btn-primary:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
+    .iframe-container {
+      flex: 1;
+      width: 100%;
+      height: calc(100% - 60px);
+      position: relative;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="images/Tejas.webp" alt="Tejas Hande" width="36" height="36" />
+      <span class="brand-title">Tejas Hande - Resume</span>
+    </div>
+    <div class="actions">
+      <a href="/" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Back to Home
+      </a>
+      <a href="assets/TejasHande_1.5yr_MERN.pdf" download="TejasHande_1.5yr_MERN.pdf" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF
+      </a>
+    </div>
+  </header>
+  <div class="iframe-container">
+    <iframe src="assets/TejasHande_1.5yr_MERN.pdf" title="Tejas Hande Resume"></iframe>
+  </div>
+</body>
+</html>

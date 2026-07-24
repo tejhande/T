@@ -280,10 +280,11 @@ function goToResume() {
   var ans = confirm(`Downloading Resume`);
   if (ans == true) {
     resumeLink.setAttribute("download", fileName);
+    resumeLink.setAttribute("href", fileName);
     return true;
   } else {
     resumeLink.removeAttribute("download");
-    resumeLink.setAttribute("href", fileName);
+    resumeLink.setAttribute("href", "resume.html");
     return false;
   }
 }
