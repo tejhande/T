@@ -24,6 +24,17 @@ hamburger.addEventListener("click", function () {
 
 const projectsData = [
   {
+    id: 15,
+    title: "NetWorth",
+    category: "MERN Stack + Finance + API",
+    description:
+      "A comprehensive wealth management and personal finance dashboard to track bank accounts, credit card utilization, live mutual fund NAVs, stock holdings, loans, and financial goals in one dashboard.",
+    image: "images/Networth.webp",
+    link: "https://bestnetworthtracker.vercel.app",
+    sortOrder: 0.5,
+    featured: true,
+  },
+  {
     id: 1,
     title: "OBFS - Agri Intelligence",
     category: "Agri-Tech + MERN + AI",
@@ -76,7 +87,7 @@ const projectsData = [
     image: "images/bajarangi.webp",
     link: "https://bajarangi.vercel.app/",
     sortOrder: 5,
-    featured: true,
+    featured: false,
   },
   {
     id: 5,
@@ -167,16 +178,16 @@ const projectsData = [
     featured: false,
   },
   {
-  id: 14,
-  title: "Naturextrakte Fertilisers LLP",
-  category: "HTML + CSS + JavaScript + SEO",
-  description:
-    "A responsive, SEO-optimized landing page built for an agri-based company, focusing on performance, clean UI, and conversion-driven design.",
-  image: "images/Naturextrakte.webp", 
-  link: "https://naturextraktefertilisers.in/",
-  sortOrder: 7.5,
-  featured: false,
-},
+    id: 14,
+    title: "Naturextrakte Fertilisers LLP",
+    category: "HTML + CSS + JavaScript + SEO",
+    description:
+      "A responsive, SEO-optimized landing page built for an agri-based company, focusing on performance, clean UI, and conversion-driven design.",
+    image: "images/Naturextrakte.webp",
+    link: "https://naturextraktefertilisers.in/",
+    sortOrder: 7.5,
+    featured: false,
+  },
 ];
 
 function renderProjects() {
@@ -209,16 +220,7 @@ function renderProjects() {
     </div>
   `;
 
-  const createRows = (projects) => {
-    let html = "";
-    for (let i = 0; i < projects.length; i += 3) {
-      const rowProjects = projects.slice(i, i + 3);
-      html += `<div class="T-my-row">${rowProjects.map(createCard).join("")}</div>`;
-    }
-    return html;
-  };
-
-  const featuredHtml = createRows(featuredProjects);
+  const featuredHtml = `<div class="T-my-row">${featuredProjects.map(createCard).join("")}</div>`;
   const showMoreBtnContainer = featuredContainer.querySelector(".text-center"); // Target the container inside portfolio
   if (showMoreBtnContainer) {
     showMoreBtnContainer.insertAdjacentHTML("beforebegin", featuredHtml);
@@ -226,7 +228,7 @@ function renderProjects() {
     const moreProjectsContainer = document.createElement("div");
     moreProjectsContainer.id = "more-projects";
     moreProjectsContainer.style.display = "none";
-    moreProjectsContainer.innerHTML = createRows(otherProjects);
+    moreProjectsContainer.innerHTML = `<div class="T-my-row">${otherProjects.map(createCard).join("")}</div>`;
     showMoreBtnContainer.insertAdjacentHTML(
       "beforebegin",
       moreProjectsContainer.outerHTML,
