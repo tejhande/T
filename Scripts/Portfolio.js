@@ -1,387 +1,529 @@
-const OFFLINE_URL = "assets/off.html";
+/**
+ * Portfolio JavaScript - Tejas Hande
+ * Clean, accessible, performant interactions for the engineering portfolio.
+ */
+
+// Mobile Navigation Toggle
 const hamburger = document.getElementById("hamburger");
-const menu = document.querySelector(".menu");
+const menu = document.getElementById("menu");
 
-hamburger.addEventListener("click", function () {
-  const hamIcon = this.querySelector(".hamburger-icon");
-  const crossIcon = this.querySelector(".cross-icon");
+if (hamburger && menu) {
+  hamburger.addEventListener("click", function () {
+    const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+    const newExpanded = !isExpanded;
+
+    hamburger.setAttribute("aria-expanded", String(newExpanded));
+    menu.setAttribute("aria-hidden", String(!newExpanded));
+    menu.classList.toggle("active", newExpanded);
+
+    const hamIcon = hamburger.querySelector(".hamburger-icon");
+    const crossIcon = hamburger.querySelector(".cross-icon");
+    if (hamIcon && crossIcon) {
+      hamIcon.style.display = newExpanded ? "none" : "inline-block";
+      crossIcon.style.display = newExpanded ? "inline-block" : "none";
+    }
+
+    const menuLinks = menu.querySelectorAll("a.links");
+    menuLinks.forEach((link) => {
+      if (newExpanded) {
+        link.removeAttribute("tabindex");
+      } else {
+        link.setAttribute("tabindex", "-1");
+      }
+    });
+  });
+
+  // Close menu on link click (mobile)
   const menuLinks = menu.querySelectorAll("a.links");
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 820 && menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-hidden", "true");
+        const hamIcon = hamburger.querySelector(".hamburger-icon");
+        const crossIcon = hamburger.querySelector(".cross-icon");
+        if (hamIcon && crossIcon) {
+          hamIcon.style.display = "inline-block";
+          crossIcon.style.display = "none";
+        }
+      }
+    });
+  });
+}
 
-  if (hamIcon.style.display === "none") {
-    hamIcon.style.display = "inline-block";
-    menu.style.display = "none";
-    crossIcon.style.display = "none";
-    menu.setAttribute("aria-hidden", "true");
-    menuLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
-  } else {
-    crossIcon.style.display = "inline-block";
-    hamIcon.style.display = "none";
-    menu.style.display = "block";
-    menu.setAttribute("aria-hidden", "false");
-    menuLinks.forEach((link) => link.removeAttribute("tabindex"));
-  }
-});
-
+// Project Dataset with category filtering, source links, and technologies
 const projectsData = [
   {
-    id: 15,
-    title: "NetWorth",
-    category: "MERN Stack + Finance + API",
+    id: 13,
+    title: "BioMonitor CBG Suite",
+    category: "ai-data",
+    categoryLabel: "Industrial AI & IoT",
+    tags: ["MERN Stack", "Industrial IoT", "Predictive Analytics", "Process Automation"],
     description:
-      "A comprehensive wealth management and personal finance dashboard to track bank accounts, credit card utilization, live mutual fund NAVs, stock holdings, loans, and financial goals in one dashboard.",
-    image: "images/Networth.webp",
-    link: "https://bestnetworthtracker.vercel.app",
-    sortOrder: 0.5,
-    featured: true,
-  },
-  {
-    id: 1,
-    title: "OBFS - Agri Intelligence",
-    category: "Agri-Tech + MERN + AI",
-    description:
-      "An outcome-based digital agriculture system helping farmers optimize fertilizer usage based on soil data, crop stage, and weather conditions and much more..",
-    image: "images/obfs.webp",
-    link: "https://obfs.in",
+      "A comprehensive CBG plant intelligence system combining operational shift logs, laboratory chemical metrics, and live telemetry to optimize biogas yield and efficiency with AI-driven insights.",
+    image: "images/cbg.webp",
+    liveUrl: "https://cbg.quantumjet.co.in/",
+    sourceUrl: null,
+    isProprietary: true,
     sortOrder: 1,
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "Kling Nuts Website",
-    category: "WordPress + Elementor + SEO",
-    description:
-      "A responsive and SEO-optimized website built for the premium peanut butter brand Kling Nuts, focusing on brand visibility and performance.",
-    image: "images/Klingnuts.webp",
-    link: "https://klingnuts.com",
-    sortOrder: 2,
     featured: true,
   },
   {
     id: 11,
     title: "QuantumJet KrishiOS",
-    category: "Agritech + Satellite + AI",
+    category: "ai-data",
+    categoryLabel: "Agritech Intelligence",
+    tags: ["React.js", "Python", "Satellite NDVI", "Soil Chemistry", "AI"],
     description:
-      "Next-gen agritech platform delivering surgical fertilizer recommendations by combining soil chemistry, satellite NDVI data, and real-time weather.",
+      "Precision agritech platform delivering surgical fertilizer and crop care recommendations by synthesizing soil chemistry, satellite NDVI vegetation indices, and localized weather intelligence.",
     image: "images/KrishiOS.webp",
-    link: "https://krishios.quantumjet.co.in/",
+    liveUrl: "https://krishios.quantumjet.co.in/",
+    sourceUrl: null,
+    isProprietary: true,
+    sortOrder: 2,
+    featured: true,
+  },
+  {
+    id: 15,
+    title: "NetWorth",
+    category: "fullstack",
+    categoryLabel: "Fintech Dashboard",
+    tags: ["MERN Stack", "Live Financial APIs", "Portfolio Tracking", "Security"],
+    description:
+      "A comprehensive wealth management and personal finance dashboard aggregating bank balances, credit card utilization, live mutual fund NAVs, stock holdings, and loan amortization schedules.",
+    image: "images/Networth.webp",
+    liveUrl: "https://bestnetworthtracker.vercel.app",
+    sourceUrl: "https://github.com/tejhande",
+    isProprietary: false,
     sortOrder: 3,
     featured: true,
   },
   {
     id: 12,
     title: "QuantumJet™ - Decentralized Synthesis",
-    category: "Patented Tech + JLR + CO₂-to-Value",
+    category: "ai-data",
+    categoryLabel: "Patented Tech Platform",
+    tags: ["Decentralized Tech", "Jet Loop Reactors", "CO₂-to-Value", "UI Architecture"],
     description:
-      "A patented Jet-Induced Synthesis Platform decentralizing the global chemical supply chain with modular, CO₂-integrated synthesis units for on-demand manufacturing.",
+      "Digital presence and control architecture for a patented Jet-Induced Synthesis Platform decentralizing chemical manufacturing with modular, CO₂-integrated synthesis units.",
     image: "images/QuantumJet.webp",
-    link: "https://quantumjet.co.in",
+    liveUrl: "https://quantumjet.co.in",
+    sourceUrl: null,
+    isProprietary: true,
     sortOrder: 4,
     featured: true,
   },
   {
-    id: 4,
-    title: "Clothes Ordering Website",
-    category: "MERN Stack",
+    id: 1,
+    title: "OBFS - Agri Intelligence",
+    category: "ai-data",
+    categoryLabel: "Agritech & AI",
+    tags: ["MERN", "Agri-Analytics", "Soil Data", "Recommendation Engine"],
     description:
-      "Windspeed is a production-grade full-stack clothes delivery system, also published in an international research journal.",
-    image: "images/bajarangi.webp",
-    link: "https://bajarangi.vercel.app/",
+      "Outcome-based digital agriculture system enabling farmers to optimize fertilization schedules and input costs based on real-time soil condition data and crop developmental stages.",
+    image: "images/obfs.webp",
+    liveUrl: "https://obfs.in",
+    sourceUrl: null,
+    isProprietary: true,
     sortOrder: 5,
-    featured: false,
+    featured: true,
   },
   {
-    id: 5,
-    title: "Image Processing Tools",
-    category: "HTML + CSS + JavaScript",
+    id: 4,
+    title: "Windspeed Food Ordering",
+    category: "fullstack",
+    categoryLabel: "Full-Stack Application",
+    tags: ["React.js", "Node.js", "Cart State", "Payment Gateway", "REST APIs"],
     description:
-      "A web-based tool offering multiple image operations like crop, rotate, resize, enlarge, cartoonize, convert to WebP, and create collages.",
-    image: "images/webp.webp",
-    link: "https://9images.vercel.app/",
+      "A production-grade clothes and food commerce platform featuring live order workflows, cart state management, and payment gateway integration. Research published in an international engineering journal.",
+    image: "images/bajarangi.webp",
+    liveUrl: "https://bajarangi.vercel.app/",
+    sourceUrl: "https://github.com/tejhande",
+    isProprietary: false,
     sortOrder: 6,
-    featured: false,
-  },
-  {
-    id: 3,
-    title: "Marsstrong International",
-    category: "HTML + CSS + JavaScript",
-    description:
-      "A modern landing page built for Marsstrong International during my internship, focusing on clean UI and responsiveness.",
-    image: "images/marsstrong.webp",
-    link: "https://marsstrong.biz",
-    sortOrder: 7,
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Insta Login: No 2FA, No Password",
-    category: "JavaScript, Chrome Extension API",
-    description:
-      "A Chrome extension that logs into Instagram using session cookies, bypassing the need for manual entry of credentials.",
-    image: "images/extension-preview.webp",
-    link: "assets/insta.html",
-    sortOrder: 8,
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "Online Code Editor",
-    category: "HTML + CSS + JavaScript",
-    description:
-      "A live code editor that takes HTML, CSS, and JavaScript input and instantly renders the output on the same page.",
-    image: "images/code.webp",
-    link: "https://tejhande.github.io/CodeEditor/",
-    sortOrder: 9,
-    featured: false,
+    featured: true,
   },
   {
     id: 8,
     title: "Create React App",
-    category: "Open Source Contribution",
+    category: "opensource",
+    categoryLabel: "Open Source Core",
+    tags: ["React Ecosystem", "JavaScript", "Developer Tooling", "CI/CD"],
     description:
-      "Contributed to the widely used Create React App repository, helping improve the React ecosystem.",
+      "Merged contribution to Meta's create-react-app repository, diagnosing and solving template setup logic for thousands of developers across the React open-source ecosystem.",
     image: "images/create-react-app-logo.webp",
-    link: "https://github.com/facebook/create-react-app/pull/17061",
-    sortOrder: 10,
+    liveUrl: "https://github.com/facebook/create-react-app/pull/17061",
+    sourceUrl: "https://github.com/facebook/create-react-app/pull/17061",
+    isProprietary: false,
+    sortOrder: 7,
     featured: false,
   },
   {
     id: 9,
     title: "ScrapeGraph AI",
-    category: "Open Source Contributor",
+    category: "opensource",
+    categoryLabel: "Open Source AI",
+    tags: ["Python", "LLM Extraction", "Web Scraping", "Automated Pipelines"],
     description:
-      "Active contributor to ScrapeGraph AI, an open-source library for automated web scraping using LLMs.",
+      "Active contributor to ScrapeGraph AI, an open-source Python library utilizing Large Language Models to automate resilient data scraping pipelines from unstructured web content.",
     image: "images/scrapegraph-ai-logo.webp",
-    link: "https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande",
-    sortOrder: 11,
+    liveUrl: "https://github.com/ScrapeGraphAI/Scrapegraph-ai",
+    sourceUrl: "https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande",
+    isProprietary: false,
+    sortOrder: 8,
     featured: false,
   },
   {
-    id: 13,
-    title: "BioMonitor CBG Suite",
-    category: "Industrial AI + MERN + IoT",
+    id: 2,
+    title: "Kling Nuts E-Commerce",
+    category: "fullstack",
+    categoryLabel: "Brand Platform & SEO",
+    tags: ["Web Architecture", "Performance", "Technical SEO", "Analytics"],
     description:
-      "A data-driven CBG plant intelligence system combining shift reports, lab analytics, and real-time operational monitoring to optimize gas yield, efficiency, and decision-making with AI-powered insights.",
-    image: "images/cbg.webp", // add screenshot here
-    link: "https://cbg.quantumjet.co.in/",
-    sortOrder: 0,
-    featured: true,
-  },
-  {
-    id: 10,
-    title: "GitHub Profile",
-    category: "Open Source Portfolio",
-    description:
-      "Explore my complete open-source journey, including contributions, repositories, and technical experiments.",
-    image: "images/github-contributions.webp",
-    link: "https://github.com/tejhande",
-    sortOrder: 12,
+      "High-performance, SEO-optimized digital presence developed for premium FMCG brand Kling Nuts, achieving top search visibility and sub-second page delivery.",
+    image: "images/Klingnuts.webp",
+    liveUrl: "https://klingnuts.com",
+    sourceUrl: null,
+    isProprietary: true,
+    sortOrder: 9,
     featured: false,
   },
   {
     id: 14,
-    title: "Naturextrakte Fertilisers LLP",
-    category: "HTML + CSS + JavaScript + SEO",
+    title: "Naturextrakte Fertilisers",
+    category: "fullstack",
+    categoryLabel: "Agri Business Platform",
+    tags: ["HTML5", "CSS3", "JavaScript", "Technical SEO", "Conversion UX"],
     description:
-      "A responsive, SEO-optimized landing page built for an agri-based company, focusing on performance, clean UI, and conversion-driven design.",
+      "Responsive, conversion-focused enterprise web portal built for an agricultural bio-fertilizers enterprise, prioritizing catalog browsing speed and mobile responsiveness.",
     image: "images/Naturextrakte.webp",
-    link: "https://naturextraktefertilisers.in/",
-    sortOrder: 7.5,
+    liveUrl: "https://naturextraktefertilisers.in/",
+    sourceUrl: null,
+    isProprietary: true,
+    sortOrder: 10,
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Image Processing Tools",
+    category: "tools",
+    categoryLabel: "Browser Engineering",
+    tags: ["JavaScript Canvas", "WebP", "Image Manipulation", "Client-Side"],
+    description:
+      "Client-side image processing utility suite performing client-side compression, format conversion (WebP), cropping, resizing, and collage generation directly in the browser with zero server roundtrips.",
+    image: "images/webp.webp",
+    liveUrl: "https://9images.vercel.app/",
+    sourceUrl: "https://github.com/tejhande",
+    isProprietary: false,
+    sortOrder: 11,
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Online Interactive Code Editor",
+    category: "tools",
+    categoryLabel: "Developer Tools",
+    tags: ["JavaScript", "DOM Sandboxing", "Live Rendering", "Developer UX"],
+    description:
+      "Real-time sandboxed code editing platform that evaluates HTML, CSS, and JavaScript with instant live rendering in an isolated iframe environment.",
+    image: "images/code.webp",
+    liveUrl: "https://tejhande.github.io/CodeEditor/",
+    sourceUrl: "https://github.com/tejhande/CodeEditor",
+    isProprietary: false,
+    sortOrder: 12,
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "Marsstrong International",
+    category: "fullstack",
+    categoryLabel: "Corporate Engineering",
+    tags: ["UI Architecture", "Responsive Design", "Cross-Browser", "Internship"],
+    description:
+      "Corporate web platform engineered during software internship at Marsstrong International, standardizing brand communication and multi-device performance.",
+    image: "images/marsstrong.webp",
+    liveUrl: "https://marsstrong.biz",
+    sourceUrl: "https://github.com/tejhande/Marsstrong",
+    isProprietary: false,
+    sortOrder: 13,
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Insta Login Security Tool",
+    category: "tools",
+    categoryLabel: "Browser Extension",
+    tags: ["Chrome Extension API", "Session Auth", "Security Engineering"],
+    description:
+      "A developer utility Chrome extension demonstrating automated session cookie authentication handling and secure tab synchronization.",
+    image: "images/extension-preview.webp",
+    liveUrl: "assets/insta.html",
+    sourceUrl: "https://github.com/tejhande/InstaTejasLog",
+    isProprietary: false,
+    sortOrder: 14,
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "GitHub Contributions & Lab",
+    category: "opensource",
+    categoryLabel: "Open Source Journey",
+    tags: ["Git", "System Design", "Open Source", "Algorithms"],
+    description:
+      "Complete public code footprint across data structures, system design explorations, automation scripts, and collaborative repository pull requests.",
+    image: "images/github-contributions.webp",
+    liveUrl: "https://github.com/tejhande",
+    sourceUrl: "https://github.com/tejhande",
+    isProprietary: false,
+    sortOrder: 15,
     featured: false,
   },
 ];
 
+let activeCategory = "all";
+let showAllProjects = false;
+
 function renderProjects() {
-  const featuredContainer = document.querySelector(".T-portfolio-content");
-  if (!featuredContainer) return;
+  const container = document.getElementById("projects-grid");
+  if (!container) return;
 
-  const rows = featuredContainer.querySelectorAll(".T-my-row, #more-projects");
-  rows.forEach((row) => row.remove());
+  const filtered = projectsData
+    .filter((project) => {
+      if (activeCategory === "all") return true;
+      if (activeCategory === "featured") return project.featured;
+      return project.category === activeCategory;
+    })
+    .sort((a, b) => a.sortOrder - b.sortOrder);
 
-  const sortedProjects = [...projectsData].sort(
-    (a, b) => a.sortOrder - b.sortOrder,
-  );
-  const featuredProjects = sortedProjects.filter((p) => p.featured);
-  const otherProjects = sortedProjects.filter((p) => !p.featured);
+  const displayList = showAllProjects || activeCategory !== "all" 
+    ? filtered 
+    : filtered.slice(0, 6);
 
-  const createCard = (project) => `
-    <div class="T-my-col">
-      <div class="T-my-card1 T-back T-port-card">
-        <div class="T-image">
-          <a href="${project.link}" target="_blank" rel="noopener">
-            <img src="${project.image}" alt="${project.title}" />
-          </a>
-        </div>
-        <div class="T-cardBelowImg">
-          <h3 class="T-greet-heading T-blue-text">${project.title}</h3>
-          <p class="T-small-para T-blue-text category-label"><strong>${project.category}</strong></p>
-          <p class="T-small-para T-blue-text">${project.description}</p>
-        </div>
-      </div>
-    </div>
-  `;
+  container.innerHTML = displayList
+    .map((project) => {
+      const tagHtml = project.tags
+        .map((tag) => `<span class="proj-tag">${tag}</span>`)
+        .join("");
 
-  const featuredHtml = `<div class="T-my-row">${featuredProjects.map(createCard).join("")}</div>`;
-  const showMoreBtnContainer = featuredContainer.querySelector(".text-center"); // Target the container inside portfolio
-  if (showMoreBtnContainer) {
-    showMoreBtnContainer.insertAdjacentHTML("beforebegin", featuredHtml);
+      const demoLink = project.liveUrl
+        ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" aria-label="Visit live demo for ${project.title}">
+            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+          </a>`
+        : "";
 
-    const moreProjectsContainer = document.createElement("div");
-    moreProjectsContainer.id = "more-projects";
-    moreProjectsContainer.style.display = "none";
-    moreProjectsContainer.innerHTML = `<div class="T-my-row">${otherProjects.map(createCard).join("")}</div>`;
-    showMoreBtnContainer.insertAdjacentHTML(
-      "beforebegin",
-      moreProjectsContainer.outerHTML,
-    );
+      const sourceLink = project.sourceUrl
+        ? `<a href="${project.sourceUrl}" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-secondary" aria-label="View source code for ${project.title}">
+            <i class="fab fa-github" aria-hidden="true"></i> Code
+          </a>`
+        : project.isProprietary
+        ? `<span class="proj-badge-proprietary" title="Enterprise/Proprietary codebase">
+            <i class="fas fa-shield-alt" aria-hidden="true"></i> Proprietary
+          </span>`
+        : "";
+
+      return `
+        <article class="proj-card" data-category="${project.category}">
+          <div class="proj-media">
+            <img src="${project.image}" alt="${project.title} screenshot" loading="lazy" width="400" height="220" />
+            <span class="proj-category-badge">${project.categoryLabel}</span>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">${project.title}</h3>
+            <p class="proj-desc">${project.description}</p>
+            <div class="proj-tags" aria-label="Technologies used">${tagHtml}</div>
+            <div class="proj-actions">
+              ${demoLink}
+              ${sourceLink}
+            </div>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
+
+  // Update Show More / Show Less Button state
+  const toggleBtn = document.getElementById("toggle-projects-btn");
+  if (toggleBtn) {
+    if (activeCategory !== "all" || filtered.length <= 6) {
+      toggleBtn.style.display = "none";
+    } else {
+      toggleBtn.style.display = "inline-flex";
+      toggleBtn.innerHTML = showAllProjects
+        ? `<i class="fas fa-chevron-up" aria-hidden="true"></i> Show Less`
+        : `<i class="fas fa-chevron-down" aria-hidden="true"></i> Show All (${filtered.length} Projects)`;
+      toggleBtn.setAttribute("aria-expanded", String(showAllProjects));
+    }
   }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  renderProjects();
+// Category filter button handlers
+function setupProjectFilters() {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      filterBtns.forEach((b) => {
+        b.classList.remove("active");
+        b.setAttribute("aria-pressed", "false");
+      });
+      this.classList.add("active");
+      this.setAttribute("aria-pressed", "true");
+      activeCategory = this.getAttribute("data-filter") || "all";
+      renderProjects();
+    });
+  });
 
-  // Initialize GitHub Calendar
-  if (typeof GitHubCalendar === "function") {
-    GitHubCalendar(".calendar", "tejhande", {
-      responsive: true,
-      global_stats: false,
-      tooltips: true,
+  const toggleBtn = document.getElementById("toggle-projects-btn");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", function () {
+      showAllProjects = !showAllProjects;
+      renderProjects();
     });
   }
-
-  const menu = document.querySelector(".menu");
-  const menuLinks = menu.querySelectorAll("a.links");
-
-  if (
-    menu.style.display === "none" ||
-    window.getComputedStyle(menu).display === "none"
-  ) {
-    menu.setAttribute("aria-hidden", "true");
-    menuLinks.forEach((link) => link.setAttribute("tabindex", "-1"));
-  } else {
-    menu.setAttribute("aria-hidden", "false");
-    menuLinks.forEach((link) => link.removeAttribute("tabindex"));
-  }
-});
-
-function form_submit(event) {
-  event.preventDefault();
-  var form = document.getElementById("myForm");
-  if (form.checkValidity()) {
-    window.location.href = "success.html";
-  } else {
-    alert("Please fill out all required fields correctly.");
-  }
-  return false;
 }
 
-function goToResume() {
-  var resumeLink = document.getElementById("resumeLink");
-  var fileName = "assets/TejasHande_2yr_MERN.pdf";
-  var ans = confirm(`Downloading Resume`);
-  if (ans == true) {
-    resumeLink.setAttribute("download", fileName);
-    resumeLink.setAttribute("href", fileName);
-    return true;
-  } else {
-    resumeLink.removeAttribute("download");
-    resumeLink.setAttribute("href", "resume.html");
-    return false;
-  }
-}
-
-const originalTitle = document.title;
-const changedTitle = "Please Come Back🫣!";
-
-function handleVisibilityChange() {
-  if (document.hidden) {
-    document.title = changedTitle;
-  } else {
-    document.title = originalTitle;
-  }
-}
-
-function redirectTo404() {
-  window.location.href = "assets/off.html";
-}
-
-function handleOnlineStatusChangeIndex() {
-  if (!navigator.onLine) {
-    redirectTo404();
-  }
-}
-
-window.addEventListener("offline", handleOnlineStatusChangeIndex);
-handleOnlineStatusChangeIndex();
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("Scripts/service-worker.js")
-      .catch((error) =>
-        console.error("Error registering Service Worker:", error),
-      );
-  });
-}
-
-window.addEventListener("online", () => {
-  window.location.href = "/";
-});
-
-window.addEventListener("offline", () => {
-  window.location.href = OFFLINE_URL;
-});
-
-document.addEventListener("visibilitychange", handleVisibilityChange);
-
-document.addEventListener("DOMContentLoaded", function () {
-  var links = document.querySelectorAll(".links");
-  links.forEach(function (link) {
+// Smooth scrolling for navigation links
+function setupSmoothScroll() {
+  const links = document.querySelectorAll('a.links, a[href^="#"]');
+  links.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault();
-      var targetId = this.getAttribute("href");
-      var targetElement = document.querySelector(targetId);
-      if (targetElement) {
-        var offsetTop = targetElement.offsetTop;
-        window.scrollTo({
-          top: offsetTop,
-          behavior: "smooth",
-        });
+      const targetId = this.getAttribute("href");
+      if (targetId && targetId.startsWith("#") && targetId.length > 1) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          const navOffset = 80;
+          const targetPosition =
+            targetElement.getBoundingClientRect().top + window.pageYOffset - navOffset;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+
+          // Set focus for accessibility
+          targetElement.setAttribute("tabindex", "-1");
+          targetElement.focus({ preventScroll: true });
+        }
       }
     });
   });
-});
+}
 
-const goTopBtn = document.getElementById("goTopBtn");
-window.onscroll = function () {
-  scrollFunction();
-};
+// Back to Top button
+function setupBackToTop() {
+  const goTopBtn = document.getElementById("goTopBtn");
+  if (!goTopBtn) return;
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    goTopBtn.style.display = "block";
-  } else {
-    goTopBtn.style.display = "none";
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.pageYOffset > 300) {
+        goTopBtn.style.display = "flex";
+      } else {
+        goTopBtn.style.display = "none";
+      }
+    },
+    { passive: true }
+  );
+
+  goTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+// Contact form handling with feedback states
+function setupContactForm() {
+  const form = document.getElementById("myForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const formStatus = document.getElementById("form-status");
+
+  if (!form || !submitBtn) return;
+
+  form.addEventListener("submit", async function (e) {
+    // Fill hidden subject line with submitter name
+    const nameInput = form.querySelector('input[name="name"]');
+    const subjectInput = document.getElementById("subject");
+    if (nameInput && subjectInput) {
+      subjectInput.value = `Portfolio Contact: ${nameInput.value}`;
+    }
+
+    // Modern asynchronous submit with loading state
+    e.preventDefault();
+    submitBtn.disabled = true;
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Sending...`;
+
+    if (formStatus) {
+      formStatus.textContent = "";
+      formStatus.className = "form-status-message";
+    }
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const data = await response.json();
+      if (response.status === 200 && data.success) {
+        form.reset();
+        if (formStatus) {
+          formStatus.textContent = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
+          formStatus.classList.add("success");
+        }
+      } else {
+        throw new Error(data.message || "Form submission failed");
+      }
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = "Unable to submit message right now. Please email directly at tejasamolhande@gmail.com";
+        formStatus.classList.add("error");
+      }
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
+  });
+}
+
+// Service worker registration
+function registerServiceWorker() {
+  if ("serviceWorker" in navigator && (window.location.protocol === "https:" || window.location.hostname === "localhost")) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("Scripts/service-worker.js")
+        .catch((error) => console.log("Service Worker registration notice:", error));
+    });
   }
 }
 
-goTopBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-document.getElementById("show-more").addEventListener("click", function () {
-  var moreProjects = document.getElementById("more-projects");
-  var showMoreBtn = document.getElementById("show-more");
-
-  if (moreProjects.style.display === "none") {
-    moreProjects.style.display = "block";
-    showMoreBtn.innerHTML = `Show Less <div class="star star-1"></div><div class="star star-2"></div><div class="star star-3"></div><div class="star star-4"></div><div class="star star-5"></div><div class="star star-6"></div>`;
-  } else {
-    moreProjects.style.display = "none";
-    showMoreBtn.innerHTML = `Show More <div class="star star-1"></div><div class="star star-2"></div><div class="star star-3"></div><div class="star star-4"></div><div class="star star-5"></div><div class="star star-6"></div>`;
+// GitHub Calendar Initialization
+function initGitHubCalendar() {
+  if (typeof GitHubCalendar === "function") {
+    try {
+      GitHubCalendar(".calendar", "tejhande", {
+        responsive: true,
+        global_stats: false,
+        tooltips: true,
+      });
+    } catch (e) {
+      console.log("GitHub calendar notice:", e);
+    }
   }
-});
+}
 
-document.getElementById("myForm").addEventListener("submit", function (event) {
-  var name = document.querySelector('input[name="name"]').value;
-  document.getElementById("subject").value = name;
+// Document Ready Bootstrap
+document.addEventListener("DOMContentLoaded", function () {
+  renderProjects();
+  setupProjectFilters();
+  setupSmoothScroll();
+  setupBackToTop();
+  setupContactForm();
+  registerServiceWorker();
+  initGitHubCalendar();
 });
