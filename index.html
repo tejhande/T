@@ -42,10 +42,18 @@
   <meta property="twitter:image" content="https://tejashande.vercel.app/images/Tejas.webp" />
   <meta property="twitter:creator" content="@tejashande25" />
 
-  <!-- Favicon and Touch Icons -->
+  <!-- Favicon, Manifest, and Touch Icons -->
   <link rel="icon" type="image/webp" sizes="32x32" href="images/Tejas.webp" />
   <link rel="icon" type="image/webp" sizes="16x16" href="images/Tejas.webp" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/Tejas.webp" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Search Engine Verification -->
+  <meta name="google-site-verification" content="googleaadb563d7d461c2f.html" />
+
+  <!-- AI / Machine Discovery Reference -->
+  <link rel="author" href="https://tejashande.vercel.app/" />
+  <link rel="help" href="llms.txt" />
 
   <!-- Theme color -->
   <meta name="theme-color" content="#0b0f17" />
@@ -90,60 +98,128 @@
     })(window, document, "clarity", "script", "t6deuzvn3i");
   </script>
 
-  <!-- Person Schema Markup -->
+  <!-- ProfilePage & Person Structured Data (Schema.org) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tejas Hande",
-    "url": "https://tejashande.vercel.app",
-    "image": "https://tejashande.vercel.app/images/Tejas.webp",
-    "jobTitle": "Full-Stack Engineer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "United BioEnergy Pvt. Ltd."
-    },
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Siddhant College Of Engineering"
-    },
-    "homeLocation": {
-      "@type": "Place",
-      "name": "Pune, Maharashtra, India"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/tejashande/",
-      "https://github.com/tejhande",
-      "https://x.com/tejashande25",
-      "https://instagram.com/tejashande2507"
-    ],
-    "knowsAbout": [
-      "React.js", "Node.js", "JavaScript", "Python", "MERN Stack", "Industrial IoT",
-      "Data Systems", "Web Development", "REST APIs", "Automation"
-    ],
-    "subjectOf": [
+    "@graph": [
       {
-        "@type": "CreativeWork",
-        "name": "Create React App Contribution",
-        "url": "https://github.com/facebook/create-react-app/pull/17061"
+        "@type": "ProfilePage",
+        "@id": "https://tejashande.vercel.app/#profilepage",
+        "url": "https://tejashande.vercel.app/",
+        "name": "Tejas Hande - Engineering Portfolio",
+        "description": "Professional engineering portfolio and verified project showcase of Full-Stack Engineer Tejas Hande.",
+        "mainEntity": {
+          "@id": "https://tejashande.vercel.app/#person"
+        }
       },
       {
-        "@type": "CreativeWork",
-        "name": "ScrapeGraph AI Contributions",
-        "url": "https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande"
+        "@type": "Person",
+        "@id": "https://tejashande.vercel.app/#person",
+        "name": "Tejas Hande",
+        "url": "https://tejashande.vercel.app/",
+        "image": "https://tejashande.vercel.app/images/Tejas.webp",
+        "jobTitle": "Full-Stack Engineer",
+        "description": "Full-Stack Engineer & Systems Builder specializing in React, Node.js, Python, and AI-driven industrial data platforms.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "United BioEnergy Pvt. Ltd.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ozar, Pune",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "India"
+          }
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Siddhant College Of Engineering",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Pune",
+            "addressRegion": "Maharashtra",
+            "addressCountry": "India"
+          }
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Pune, Maharashtra, India"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/tejashande/",
+          "https://github.com/tejhande",
+          "https://x.com/tejashande25",
+          "https://instagram.com/tejashande2507",
+          "https://console.zerodha.com/verified/b04192e6"
+        ],
+        "knowsAbout": [
+          "React.js", "Node.js", "JavaScript (ES6+)", "Python", "MERN Stack",
+          "Industrial IoT", "Clean Energy Telemetry", "Agritech Data Systems",
+          "REST APIs", "SQL", "MongoDB", "Process Automation"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Bachelor of Engineering (B.E.) in Computer Science",
+            "recognizedBy": {
+              "@type": "EducationalOrganization",
+              "name": "Siddhant College Of Engineering"
+            }
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Responsive Web Design Certification",
+            "recognizedBy": {
+              "@type": "Organization",
+              "name": "freeCodeCamp"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tejashande.vercel.app/#website",
+        "url": "https://tejashande.vercel.app/",
+        "name": "Tejas Hande Portfolio",
+        "description": "Portfolio of Tejas Hande, Full-Stack Engineer & Systems Builder specializing in React, Node.js, Python, and operational data systems.",
+        "publisher": {
+          "@id": "https://tejashande.vercel.app/#person"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "BioMonitor CBG Suite",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://cbg.quantumjet.co.in/",
+        "author": {
+          "@id": "https://tejashande.vercel.app/#person"
+        },
+        "description": "Industrial intelligence platform monitoring CBG plant telemetry (pH, COD, yield, electrical tracking) with AI insights."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "QuantumJet KrishiOS",
+        "applicationCategory": "AgricultureApplication",
+        "operatingSystem": "Web",
+        "url": "https://krishios.quantumjet.co.in/",
+        "author": {
+          "@id": "https://tejashande.vercel.app/#person"
+        },
+        "description": "Precision agritech decision platform synthesizing soil chemistry, satellite NDVI data, and weather forecasts."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NetWorth Wealth Tracker",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://bestnetworthtracker.vercel.app",
+        "author": {
+          "@id": "https://tejashande.vercel.app/#person"
+        },
+        "description": "Personal finance and wealth tracking dashboard aggregating live bank, credit card, and mutual fund NAV analytics."
       }
     ]
-  }
-  </script>
-
-  <!-- WebSite Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://tejashande.vercel.app/",
-    "name": "Tejas Hande Portfolio",
-    "description": "Portfolio of Tejas Hande, Full-Stack Engineer & Systems Builder specializing in React, Node.js, Python, and AI-driven data systems."
   }
   </script>
 
@@ -311,9 +387,83 @@
           <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Tools & Extensions</button>
         </div>
 
-        <!-- Dynamic Grid managed by Scripts/Portfolio.js -->
+        <!-- Dynamic Grid managed by Scripts/Portfolio.js with crawlable SSR fallback for search crawlers -->
         <div class="projects-grid" id="projects-grid">
-          <!-- Populated by Portfolio.js -->
+          <article class="proj-card" data-category="ai-data">
+            <div class="proj-media">
+              <img src="images/cbg.webp" alt="BioMonitor CBG Suite screenshot" loading="lazy" width="400" height="220" />
+              <span class="proj-category-badge">Industrial AI &amp; IoT</span>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title">BioMonitor CBG Suite</h3>
+              <p class="proj-desc">A comprehensive CBG plant intelligence system combining operational shift logs, laboratory chemical metrics, and live telemetry to optimize biogas yield and efficiency with AI-driven insights.</p>
+              <div class="proj-tags" aria-label="Technologies used">
+                <span class="proj-tag">MERN Stack</span>
+                <span class="proj-tag">Industrial IoT</span>
+                <span class="proj-tag">Predictive Analytics</span>
+                <span class="proj-tag">Process Automation</span>
+              </div>
+              <div class="proj-actions">
+                <a href="https://cbg.quantumjet.co.in/" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" aria-label="Visit live demo for BioMonitor CBG Suite">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                </a>
+                <span class="proj-badge-proprietary" title="Enterprise/Proprietary codebase">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i> Proprietary
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="ai-data">
+            <div class="proj-media">
+              <img src="images/KrishiOS.webp" alt="QuantumJet KrishiOS screenshot" loading="lazy" width="400" height="220" />
+              <span class="proj-category-badge">Agritech Intelligence</span>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title">QuantumJet KrishiOS</h3>
+              <p class="proj-desc">Precision agritech platform delivering surgical fertilizer and crop care recommendations by synthesizing soil chemistry, satellite NDVI vegetation indices, and localized weather intelligence.</p>
+              <div class="proj-tags" aria-label="Technologies used">
+                <span class="proj-tag">React.js</span>
+                <span class="proj-tag">Python</span>
+                <span class="proj-tag">Satellite NDVI</span>
+                <span class="proj-tag">Soil Chemistry</span>
+                <span class="proj-tag">AI</span>
+              </div>
+              <div class="proj-actions">
+                <a href="https://krishios.quantumjet.co.in/" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" aria-label="Visit live demo for QuantumJet KrishiOS">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                </a>
+                <span class="proj-badge-proprietary" title="Enterprise/Proprietary codebase">
+                  <i class="fas fa-shield-alt" aria-hidden="true"></i> Proprietary
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card" data-category="fullstack">
+            <div class="proj-media">
+              <img src="images/Networth.webp" alt="NetWorth screenshot" loading="lazy" width="400" height="220" />
+              <span class="proj-category-badge">Fintech Dashboard</span>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-title">NetWorth</h3>
+              <p class="proj-desc">A comprehensive wealth management and personal finance dashboard aggregating bank balances, credit card utilization, live mutual fund NAVs, stock holdings, and loan amortization schedules.</p>
+              <div class="proj-tags" aria-label="Technologies used">
+                <span class="proj-tag">MERN Stack</span>
+                <span class="proj-tag">Live Financial APIs</span>
+                <span class="proj-tag">Portfolio Tracking</span>
+                <span class="proj-tag">Security</span>
+              </div>
+              <div class="proj-actions">
+                <a href="https://bestnetworthtracker.vercel.app" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-primary" aria-label="Visit live demo for NetWorth">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Demo
+                </a>
+                <a href="https://github.com/tejhande" target="_blank" rel="noopener noreferrer" class="proj-btn proj-btn-secondary" aria-label="View source code for NetWorth">
+                  <i class="fab fa-github" aria-hidden="true"></i> Code
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
 
         <div class="projects-toggle-container">

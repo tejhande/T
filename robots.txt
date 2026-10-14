@@ -1,4 +1,41 @@
+# ==============================================================================
+# robots.txt for Tejas Hande Portfolio (https://tejashande.vercel.app)
+# Designed for Search Engine Crawlers & AI Answer Engines (GEO / AEO)
+# ==============================================================================
+
+# Traditional Search Engines
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Bingbot
+User-agent: Yandex
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+Allow: /
+Allow: /Styles/
+Allow: /Scripts/
+Allow: /images/
+Allow: /assets/
+
+# AI Search & Answer Engines (Crawl for Real-Time Search & Retrieval)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Claude-Web
+User-agent: BingPreview
+Allow: /
+Allow: /Styles/
+Allow: /Scripts/
+Allow: /images/
+Allow: /assets/
+
+# General Crawlers
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://tejashande.vercel.app
+Allow: /
+Allow: /Styles/
+Allow: /Scripts/
+Allow: /images/
+Allow: /assets/
+Disallow: /api/
+
+# Sitemap Location (Accurate Production URL)
+Sitemap: https://tejashande.vercel.app/sitemap.xml

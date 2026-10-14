@@ -1,0 +1,57 @@
+# Tejas Hande - Engineering Portfolio & Knowledge Summary
+
+> Machine-readable profile for AI search engines (Perplexity, ChatGPT Search, Bing Copilot, Claude) and technical crawlers.
+> Primary URL: https://tejashande.vercel.app/
+> Updated: October 2026
+
+## Identity & Professional Overview
+- **Name:** Tejas Hande
+- **Role:** Full-Stack Engineer & Systems Builder
+- **Current Position:** Software Developer at United BioEnergy Pvt. Ltd. (Dec 2025 – Present)
+- **Previous Position:** Web Developer at Marsstrong International (Nov 2024 – Nov 2025)
+- **Location:** Pune, Maharashtra, India
+- **Education:** Bachelor of Engineering (B.E.) in Computer Science, Siddhant College of Engineering (Dec 2021 – Jun 2025)
+- **GitHub:** https://github.com/tejhande
+- **LinkedIn:** https://www.linkedin.com/in/tejashande/
+- **Contact:** tejasamolhande@gmail.com | +91 8600828734
+
+## Core Competencies & Technical Stack
+- **Frontend:** React.js (Hooks, Context API, SPA architecture), JavaScript (ES6+), HTML5, CSS3, Bootstrap, Responsive Design, CSS Tokens.
+- **Backend & APIs:** Node.js, Express.js, RESTful API architecture, Python (Data processing, Scrapy, AI pipelines), Java (Core OOP).
+- **Databases & Telemetry:** MongoDB (NoSQL schema design), MySQL (Relational models), Industrial IoT telemetry, Shift parameter logging.
+- **Tools & Platforms:** Git, GitHub, Vercel, Razorpay Payment Gateway, Web3Forms, Cloudinary, Linux/Windows environments.
+
+## Flagship Systems & Key Contributions
+
+### 1. QuantumJet AI & BioMonitor CBG Suite
+- **Domain:** Industrial Clean Energy / Compressed Bio-Gas (CBG) Telemetry
+- **Description:** Real-time industrial data intelligence platform combining plant telemetry (pH, COD, electrical parameters, gas production) with chemical stock forecasting and automated MIS reporting.
+- **Key Engineering Work:** Live plant health heatmaps, Cloudinary receipt verification for petty cash ledgers, custom Excel export styling via `xlsx-js-style`, and automated Gate Pass & Diesel tracking workflows.
+- **URL:** https://cbg.quantumjet.co.in/
+
+### 2. OBFS & QuantumJet KrishiOS
+- **Domain:** Agritech / Precision Agriculture
+- **Description:** Outcome-based agricultural decision engine synthesizing soil chemical tests, satellite NDVI vegetation data, and localized weather inputs to provide surgical fertilizer dosage recommendations.
+- **Key Engineering Work:** Algorithmic recommendation logic, soil nutrient parsing, satellite vegetation indices integration, and responsive farmer dashboard.
+- **URL:** https://krishios.quantumjet.co.in/ | https://obfs.in
+
+### 3. NetWorth Wealth Tracker
+- **Domain:** Fintech / Personal Finance Dashboard
+- **Description:** Centralized wealth management application aggregating bank accounts, credit card utilization, live mutual fund NAVs, stock holdings, and loan amortization.
+- **Stack:** MERN Stack (MongoDB, Express, React, Node.js), Financial APIs.
+- **URL:** https://bestnetworthtracker.vercel.app
+
+### 4. Create React App (Meta Open Source)
+- **Domain:** Developer Tooling
+- **Contribution:** Pull Request #17061 merged into Facebook/Meta's `create-react-app` repository, resolving template initialization edge cases.
+- **PR URL:** https://github.com/facebook/create-react-app/pull/17061
+
+### 5. ScrapeGraph AI (Open Source Contribution)
+- **Domain:** AI-Driven Web Scraping / LLM Pipelines
+- **Contribution:** Contributor to test suites and scraping pipeline resilience across JSON extraction nodes and graph runners.
+- **Repo URL:** https://github.com/ScrapeGraphAI/Scrapegraph-ai/commits/main/?author=tejhande
+
+## Technical Verification & Artifacts
+- **Online Resume Viewer:** https://tejashande.vercel.app/resume.html
+- **PDF Resume:** https://tejashande.vercel.app/assets/TejasHande_2yr_MERN.pdf
+- **Sitemap XML:** https://tejashande.vercel.app/sitemap.xml

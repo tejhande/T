@@ -3,24 +3,35 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+  <!-- Primary Canonical Homepage -->
   <url>
     <loc>https://tejashande.vercel.app/</loc>
-    <lastmod>2025-08-29T06:59:11+00:00</lastmod>
-    <priority>1.00</priority>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
+  <!-- Resume Viewer Page -->
   <url>
-    <loc>https://tejashande.vercel.app/assets/TejasHande_Fresher_MERN.pdf</loc>
-    <lastmod>2025-08-29T06:59:12+00:00</lastmod>
-    <priority>0.80</priority>
+    <loc>https://tejashande.vercel.app/resume.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
+  <!-- Primary Resume PDF Document -->
+  <url>
+    <loc>https://tejashande.vercel.app/assets/TejasHande_2yr_MERN.pdf</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Technical Utility Demo: Instagram Session Security Extension Page -->
   <url>
     <loc>https://tejashande.vercel.app/assets/insta.html</loc>
-    <lastmod>2025-08-29T06:59:12+00:00</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
-
 </urlset>
